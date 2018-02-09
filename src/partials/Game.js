@@ -26,6 +26,7 @@ export default class Game {
 			((this.height - this.paddleHeight) / 2),
 			KEYS.a,
 			KEYS.z,
+			'player1'
 		);
 
 		this.player2 = new Paddle(
@@ -36,6 +37,7 @@ export default class Game {
 			((this.height - this.paddleHeight) / 2),
 			KEYS.up,
 			KEYS.down,
+			'player2'
 		);
 
 		document.addEventListener('keydown', event => {
