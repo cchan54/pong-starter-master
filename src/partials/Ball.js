@@ -27,7 +27,6 @@ export default class Ball {
   goal(player){
     player.score++;
     this.reset();
-    console.log(player.score);
   }
 
   wallCollision(){
