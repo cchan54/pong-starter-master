@@ -270,7 +270,7 @@ var Ball = function () {
     this.x = x;
     this.y = y;
     this.direction = 1;
-    this.ping = new Audio('public/sounds/pong-01.wav');
+    this.ping = new Audio('public/sounds/smb_stomp.wav');
     this.reset();
   }
 
