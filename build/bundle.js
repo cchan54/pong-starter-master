@@ -68,856 +68,175 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/* no static exports found */
+/* all exports used */
+/*!*************************!*\
+  !*** ./src/settings.js ***!
+  \*************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-// settings.js
-var SVG_NS = exports.SVG_NS = 'http://www.w3.org/2000/svg';
-
-var KEYS = exports.KEYS = {
-  a: 'a', // player 1 up key
-  z: 'z', // player 1 down key
-  up: 'ArrowUp', // player 2 up key
-  down: 'ArrowDown', // player 2 down key
-  spaceBar: ' ' // pausing game
-};
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n// settings.js\nvar SVG_NS = exports.SVG_NS = 'http://www.w3.org/2000/svg';\n\nvar KEYS = exports.KEYS = {\n  a: 'a', // player 1 up key\n  z: 'z', // player 1 down key\n  up: 'ArrowUp', // player 2 up key\n  down: 'ArrowDown', // player 2 down key\n  spaceBar: ' ' // pausing game\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvc2V0dGluZ3MuanM/NDNkNiJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBzZXR0aW5ncy5qc1xuZXhwb3J0IGNvbnN0IFNWR19OUyA9ICdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc7XG5cbmV4cG9ydCBjb25zdCBLRVlTID0ge1xuICBhOiAnYScgICAgICAsICAvLyBwbGF5ZXIgMSB1cCBrZXlcbiAgejogJ3onLCAgICAgICAgLy8gcGxheWVyIDEgZG93biBrZXlcbiAgdXA6ICdBcnJvd1VwJywgICAgICAgLy8gcGxheWVyIDIgdXAga2V5XG4gIGRvd246ICdBcnJvd0Rvd24nLCAgICAgLy8gcGxheWVyIDIgZG93biBrZXlcbiAgc3BhY2VCYXI6ICcgJywgLy8gcGF1c2luZyBnYW1lXG59XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHNyYy9zZXR0aW5ncy5qcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFMQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///0\n");
 
 /***/ }),
 /* 1 */
+/* no static exports found */
+/* all exports used */
+/*!*****************************************!*\
+  !*** ./public/fonts/slkscr-webfont.eot ***!
+  \*****************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "public/fonts/slkscr-webfont.eot";
+eval("module.exports = __webpack_require__.p + \"public/fonts/slkscr-webfont.eot\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMS5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3B1YmxpYy9mb250cy9zbGtzY3Itd2ViZm9udC5lb3Q/MTcwZSJdLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IF9fd2VicGFja19wdWJsaWNfcGF0aF9fICsgXCJwdWJsaWMvZm9udHMvc2xrc2NyLXdlYmZvbnQuZW90XCI7XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9wdWJsaWMvZm9udHMvc2xrc2NyLXdlYmZvbnQuZW90XG4vLyBtb2R1bGUgaWQgPSAxXG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJtYXBwaW5ncyI6IkFBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///1\n");
 
 /***/ }),
 /* 2 */
+/* no static exports found */
+/* all exports used */
+/*!******************************!*\
+  !*** ./src/partials/Game.js ***!
+  \******************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _settings = __webpack_require__(0);
-
-var _Board = __webpack_require__(6);
-
-var _Board2 = _interopRequireDefault(_Board);
-
-var _Paddle = __webpack_require__(7);
-
-var _Paddle2 = _interopRequireDefault(_Paddle);
-
-var _Ball = __webpack_require__(5);
-
-var _Ball2 = _interopRequireDefault(_Ball);
-
-var _Score = __webpack_require__(8);
-
-var _Score2 = _interopRequireDefault(_Score);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Game = function () {
-	function Game(element, width, height) {
-		var _this = this;
-
-		_classCallCheck(this, Game);
-
-		this.element = element;
-		this.width = width;
-		this.height = height;
-		this.gameElement = document.getElementById(this.element);
-		this.board = new _Board2.default(this.width, this.height);
-		this.ball = new _Ball2.default(8, this.width, this.height);
-
-		this.paddleWidth = 8;
-		this.paddleHeight = 56;
-		this.boardGap = 10;
-
-		this.player1 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.boardGap, (this.height - this.paddleHeight) / 2, _settings.KEYS.a, _settings.KEYS.z, 'player1');
-
-		this.player2 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.width - this.boardGap - this.paddleWidth, (this.height - this.paddleHeight) / 2, _settings.KEYS.up, _settings.KEYS.down, 'player2');
-
-		document.addEventListener('keydown', function (event) {
-			switch (event.key) {
-				case _settings.KEYS.spaceBar:
-					_this.pause = !_this.pause;
-					break;
-			}
-		});
-
-		this.score1 = new _Score2.default(this.width / 2 - 100, 30, 30);
-
-		this.score2 = new _Score2.default(this.width / 2 + 80, 30, 30);
-	}
-
-	_createClass(Game, [{
-		key: 'render',
-		value: function render() {
-
-			if (this.pause) {
-				return;
-			}
-
-			this.gameElement.innerHTML = '';
-
-			var svg = document.createElementNS(_settings.SVG_NS, 'svg');
-			svg.setAttributeNS(null, 'width', this.width);
-			svg.setAttributeNS(null, 'height', this.height);
-			svg.setAttributeNS(null, 'viewBox', '0 0 ' + this.width + ' ' + this.height);
-
-			this.board.render(svg);
-			this.ball.render(svg, this.player1, this.player2);
-			this.score1.render(svg, this.player1.score);
-			this.score2.render(svg, this.player2.score);
-			this.player1.render(svg);
-			this.player2.render(svg);
-			this.gameElement.appendChild(svg);
-
-			if (this.player1.score === 11) {
-				alert('MARIO, YOU SAVED PRINCESS PEACH');
-			} else if (this.player2.score === 11) {
-				alert('BOWSER, YOU KILLED MARIO');
-			}
-		}
-	}]);
-
-	return Game;
-}();
-
-exports.default = Game;
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _settings = __webpack_require__(/*! ../settings */ 0);\n\nvar _Board = __webpack_require__(/*! ./Board */ 6);\n\nvar _Board2 = _interopRequireDefault(_Board);\n\nvar _Paddle = __webpack_require__(/*! ./Paddle */ 7);\n\nvar _Paddle2 = _interopRequireDefault(_Paddle);\n\nvar _Ball = __webpack_require__(/*! ./Ball */ 5);\n\nvar _Ball2 = _interopRequireDefault(_Ball);\n\nvar _Score = __webpack_require__(/*! ./Score */ 8);\n\nvar _Score2 = _interopRequireDefault(_Score);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Game = function () {\n\tfunction Game(element, width, height) {\n\t\tvar _this = this;\n\n\t\t_classCallCheck(this, Game);\n\n\t\tthis.element = element;\n\t\tthis.width = width;\n\t\tthis.height = height;\n\t\tthis.gameElement = document.getElementById(this.element);\n\t\tthis.board = new _Board2.default(this.width, this.height);\n\t\tthis.ball = new _Ball2.default(8, this.width, this.height);\n\n\t\tthis.paddleWidth = 8;\n\t\tthis.paddleHeight = 56;\n\t\tthis.boardGap = 10;\n\n\t\tthis.player1 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.boardGap, (this.height - this.paddleHeight) / 2, _settings.KEYS.a, _settings.KEYS.z, 'player1');\n\n\t\tthis.player2 = new _Paddle2.default(this.height, this.paddleWidth, this.paddleHeight, this.width - this.boardGap - this.paddleWidth, (this.height - this.paddleHeight) / 2, _settings.KEYS.up, _settings.KEYS.down, 'player2');\n\n\t\tdocument.addEventListener('keydown', function (event) {\n\t\t\tswitch (event.key) {\n\t\t\t\tcase _settings.KEYS.spaceBar:\n\t\t\t\t\t_this.pause = !_this.pause;\n\t\t\t\t\tbreak;\n\t\t\t}\n\t\t});\n\n\t\tthis.score1 = new _Score2.default(this.width / 2 - 100, 30, 30);\n\n\t\tthis.score2 = new _Score2.default(this.width / 2 + 80, 30, 30);\n\t}\n\n\t_createClass(Game, [{\n\t\tkey: 'render',\n\t\tvalue: function render() {\n\n\t\t\tif (this.pause) {\n\t\t\t\treturn;\n\t\t\t}\n\n\t\t\tthis.gameElement.innerHTML = '';\n\n\t\t\tvar svg = document.createElementNS(_settings.SVG_NS, 'svg');\n\t\t\tsvg.setAttributeNS(null, 'width', this.width);\n\t\t\tsvg.setAttributeNS(null, 'height', this.height);\n\t\t\tsvg.setAttributeNS(null, 'viewBox', '0 0 ' + this.width + ' ' + this.height);\n\n\t\t\tthis.board.render(svg);\n\t\t\tthis.ball.render(svg, this.player1, this.player2);\n\t\t\tthis.score1.render(svg, this.player1.score);\n\t\t\tthis.score2.render(svg, this.player2.score);\n\t\t\tthis.player1.render(svg);\n\t\t\tthis.player2.render(svg);\n\t\t\tthis.gameElement.appendChild(svg);\n\n\t\t\tif (this.player1.score === 11) {\n\t\t\t\talert('MARIO, YOU SAVED PRINCESS PEACH');\n\t\t\t} else if (this.player2.score === 11) {\n\t\t\t\talert('BOWSER, YOU KILLED MARIO');\n\t\t\t}\n\t\t}\n\t}]);\n\n\treturn Game;\n}();\n\nexports.default = Game;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMi5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvcGFydGlhbHMvR2FtZS5qcz9kMmZjIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFNWR19OUywgS0VZUyB9IGZyb20gJy4uL3NldHRpbmdzJztcbmltcG9ydCBCb2FyZCBmcm9tICcuL0JvYXJkJztcbmltcG9ydCBQYWRkbGUgZnJvbSAnLi9QYWRkbGUnO1xuaW1wb3J0IEJhbGwgZnJvbSAnLi9CYWxsJztcbmltcG9ydCBTY29yZSBmcm9tICcuL1Njb3JlJztcblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgR2FtZSB7XG5cblx0Y29uc3RydWN0b3IoZWxlbWVudCwgd2lkdGgsIGhlaWdodCkge1xuXHRcdHRoaXMuZWxlbWVudCA9IGVsZW1lbnQ7XG5cdFx0dGhpcy53aWR0aCA9IHdpZHRoO1xuXHRcdHRoaXMuaGVpZ2h0ID0gaGVpZ2h0O1xuXHRcdHRoaXMuZ2FtZUVsZW1lbnQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCh0aGlzLmVsZW1lbnQpO1xuXHRcdHRoaXMuYm9hcmQgPSBuZXcgQm9hcmQodGhpcy53aWR0aCwgdGhpcy5oZWlnaHQpO1xuXHRcdHRoaXMuYmFsbCA9IG5ldyBCYWxsKDgsIHRoaXMud2lkdGgsIHRoaXMuaGVpZ2h0KTtcblxuXHRcdHRoaXMucGFkZGxlV2lkdGggPSA4O1xuXHRcdHRoaXMucGFkZGxlSGVpZ2h0ID0gNTY7XG5cdFx0dGhpcy5ib2FyZEdhcCA9IDEwO1xuXG5cdFx0dGhpcy5wbGF5ZXIxID0gbmV3IFBhZGRsZShcblx0XHRcdHRoaXMuaGVpZ2h0LFxuXHRcdFx0dGhpcy5wYWRkbGVXaWR0aCxcblx0XHRcdHRoaXMucGFkZGxlSGVpZ2h0LFxuXHRcdFx0dGhpcy5ib2FyZEdhcCxcblx0XHRcdCgodGhpcy5oZWlnaHQgLSB0aGlzLnBhZGRsZUhlaWdodCkgLyAyKSxcblx0XHRcdEtFWVMuYSxcblx0XHRcdEtFWVMueixcblx0XHRcdCdwbGF5ZXIxJ1xuXHRcdCk7XG5cblx0XHR0aGlzLnBsYXllcjIgPSBuZXcgUGFkZGxlKFxuXHRcdFx0dGhpcy5oZWlnaHQsXG5cdFx0XHR0aGlzLnBhZGRsZVdpZHRoLFxuXHRcdFx0dGhpcy5wYWRkbGVIZWlnaHQsXG5cdFx0XHQodGhpcy53aWR0aCAtIHRoaXMuYm9hcmRHYXAgLSB0aGlzLnBhZGRsZVdpZHRoKSxcblx0XHRcdCgodGhpcy5oZWlnaHQgLSB0aGlzLnBhZGRsZUhlaWdodCkgLyAyKSxcblx0XHRcdEtFWVMudXAsXG5cdFx0XHRLRVlTLmRvd24sXG5cdFx0XHQncGxheWVyMidcblx0XHQpO1xuXG5cdFx0ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigna2V5ZG93bicsIGV2ZW50ID0+IHtcblx0XHRcdHN3aXRjaChldmVudC5rZXkpIHtcblx0XHRcdFx0Y2FzZSBLRVlTLnNwYWNlQmFyOlxuXHRcdFx0XHRcdHRoaXMucGF1c2UgPSAhdGhpcy5wYXVzZTtcblx0XHRcdFx0XHRcdGJyZWFrO1xuXHRcdFx0fVxuXHRcdFx0fSlcblx0XHRcblx0XHR0aGlzLnNjb3JlMT0gbmV3IFNjb3JlKHRoaXMud2lkdGgvMiAtMTAwLCAzMCwgMzApO1xuXG5cdFx0dGhpcy5zY29yZTI9IG5ldyBTY29yZSh0aGlzLndpZHRoLzIgKzgwLCAzMCwgMzApO1xuXHRcdH1cblxuXHRyZW5kZXIoKSB7XG5cblx0XHRpZiAodGhpcy5wYXVzZSl7XG4gICAgICByZXR1cm47XG5cdFx0fVxuXG5cdFx0dGhpcy5nYW1lRWxlbWVudC5pbm5lckhUTUwgPSAnJztcblxuXHRcdGxldCBzdmcgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoU1ZHX05TLCAnc3ZnJyk7XG5cdFx0c3ZnLnNldEF0dHJpYnV0ZU5TKG51bGwsICd3aWR0aCcsIHRoaXMud2lkdGgpO1xuXHRcdHN2Zy5zZXRBdHRyaWJ1dGVOUyhudWxsLCAnaGVpZ2h0JywgdGhpcy5oZWlnaHQpO1xuXHRcdHN2Zy5zZXRBdHRyaWJ1dGVOUyhudWxsLCAndmlld0JveCcsIGAwIDAgJHt0aGlzLndpZHRofSAke3RoaXMuaGVpZ2h0fWApO1xuXG5cdFx0dGhpcy5ib2FyZC5yZW5kZXIoc3ZnKTtcblx0XHR0aGlzLmJhbGwucmVuZGVyKHN2ZywgdGhpcy5wbGF5ZXIxLCB0aGlzLnBsYXllcjIpO1xuXHRcdHRoaXMuc2NvcmUxLnJlbmRlcihzdmcsIHRoaXMucGxheWVyMS5zY29yZSk7XG5cdFx0dGhpcy5zY29yZTIucmVuZGVyKHN2ZywgdGhpcy5wbGF5ZXIyLnNjb3JlKTtcblx0XHR0aGlzLnBsYXllcjEucmVuZGVyKHN2Zyk7XG5cdFx0dGhpcy5wbGF5ZXIyLnJlbmRlcihzdmcpO1xuXHRcdHRoaXMuZ2FtZUVsZW1lbnQuYXBwZW5kQ2hpbGQoc3ZnKTtcblxuXHRcdGlmICh0aGlzLnBsYXllcjEuc2NvcmUgPT09IDExKSB7XG5cdFx0XHRhbGVydCgnTUFSSU8sIFlPVSBTQVZFRCBQUklOQ0VTUyBQRUFDSCcpO1xuXHRcdH0gZWxzZSBpZiAodGhpcy5wbGF5ZXIyLnNjb3JlID09PSAxMSkge1xuXHRcdFx0YWxlcnQoJ0JPV1NFUiwgWU9VIEtJTExFRCBNQVJJTycpO1xuXHRcdH1cblx0fVxuXG59XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHNyYy9wYXJ0aWFscy9HYW1lLmpzIl0sIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFBO0FBQ0E7QUFBQTtBQUNBOzs7QUFBQTtBQUNBOzs7QUFBQTtBQUNBOzs7QUFBQTtBQUNBOzs7Ozs7O0FBQ0E7QUFFQTtBQUFBO0FBQ0E7QUFEQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFVQTtBQUNBO0FBVUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUhBO0FBS0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7OztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7Ozs7O0FBM0VBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///2\n");
 
 /***/ }),
 /* 3 */
+/* no static exports found */
+/* all exports used */
+/*!*****************************!*\
+  !*** ./src/styles/game.css ***!
+  \*****************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(9);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(14)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!./game.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!./game.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
+eval("// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// load the styles\nvar content = __webpack_require__(/*! !../../~/css-loader!./game.css */ 9);\nif(typeof content === 'string') content = [[module.i, content, '']];\n// add the styles to the DOM\nvar update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 14)(content, {});\nif(content.locals) module.exports = content.locals;\n// Hot Module Replacement\nif(false) {\n\t// When the styles change, update the <style> tags\n\tif(!content.locals) {\n\t\tmodule.hot.accept(\"!!../../node_modules/css-loader/index.js!./game.css\", function() {\n\t\t\tvar newContent = require(\"!!../../node_modules/css-loader/index.js!./game.css\");\n\t\t\tif(typeof newContent === 'string') newContent = [[module.id, newContent, '']];\n\t\t\tupdate(newContent);\n\t\t});\n\t}\n\t// When the module is disposed, remove the <style> tags\n\tmodule.hot.dispose(function() { update(); });\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9zdHlsZXMvZ2FtZS5jc3M/YWJmNCJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBzdHlsZS1sb2FkZXI6IEFkZHMgc29tZSBjc3MgdG8gdGhlIERPTSBieSBhZGRpbmcgYSA8c3R5bGU+IHRhZ1xuXG4vLyBsb2FkIHRoZSBzdHlsZXNcbnZhciBjb250ZW50ID0gcmVxdWlyZShcIiEhLi4vLi4vbm9kZV9tb2R1bGVzL2Nzcy1sb2FkZXIvaW5kZXguanMhLi9nYW1lLmNzc1wiKTtcbmlmKHR5cGVvZiBjb250ZW50ID09PSAnc3RyaW5nJykgY29udGVudCA9IFtbbW9kdWxlLmlkLCBjb250ZW50LCAnJ11dO1xuLy8gYWRkIHRoZSBzdHlsZXMgdG8gdGhlIERPTVxudmFyIHVwZGF0ZSA9IHJlcXVpcmUoXCIhLi4vLi4vbm9kZV9tb2R1bGVzL3N0eWxlLWxvYWRlci9hZGRTdHlsZXMuanNcIikoY29udGVudCwge30pO1xuaWYoY29udGVudC5sb2NhbHMpIG1vZHVsZS5leHBvcnRzID0gY29udGVudC5sb2NhbHM7XG4vLyBIb3QgTW9kdWxlIFJlcGxhY2VtZW50XG5pZihtb2R1bGUuaG90KSB7XG5cdC8vIFdoZW4gdGhlIHN0eWxlcyBjaGFuZ2UsIHVwZGF0ZSB0aGUgPHN0eWxlPiB0YWdzXG5cdGlmKCFjb250ZW50LmxvY2Fscykge1xuXHRcdG1vZHVsZS5ob3QuYWNjZXB0KFwiISEuLi8uLi9ub2RlX21vZHVsZXMvY3NzLWxvYWRlci9pbmRleC5qcyEuL2dhbWUuY3NzXCIsIGZ1bmN0aW9uKCkge1xuXHRcdFx0dmFyIG5ld0NvbnRlbnQgPSByZXF1aXJlKFwiISEuLi8uLi9ub2RlX21vZHVsZXMvY3NzLWxvYWRlci9pbmRleC5qcyEuL2dhbWUuY3NzXCIpO1xuXHRcdFx0aWYodHlwZW9mIG5ld0NvbnRlbnQgPT09ICdzdHJpbmcnKSBuZXdDb250ZW50ID0gW1ttb2R1bGUuaWQsIG5ld0NvbnRlbnQsICcnXV07XG5cdFx0XHR1cGRhdGUobmV3Q29udGVudCk7XG5cdFx0fSk7XG5cdH1cblx0Ly8gV2hlbiB0aGUgbW9kdWxlIGlzIGRpc3Bvc2VkLCByZW1vdmUgdGhlIDxzdHlsZT4gdGFnc1xuXHRtb2R1bGUuaG90LmRpc3Bvc2UoZnVuY3Rpb24oKSB7IHVwZGF0ZSgpOyB9KTtcbn1cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3NyYy9zdHlsZXMvZ2FtZS5jc3Ncbi8vIG1vZHVsZSBpZCA9IDNcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///3\n");
 
 /***/ }),
 /* 4 */
+/* no static exports found */
+/* all exports used */
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-__webpack_require__(3);
-
-var _Game = __webpack_require__(2);
-
-var _Game2 = _interopRequireDefault(_Game);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// create a game instance
-var game = new _Game2.default('game', 512, 256);
-
-(function gameLoop() {
-    game.render();
-    requestAnimationFrame(gameLoop);
-})();
+eval("\n\n__webpack_require__(/*! ./styles/game.css */ 3);\n\nvar _Game = __webpack_require__(/*! ./partials/Game */ 2);\n\nvar _Game2 = _interopRequireDefault(_Game);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// create a game instance\nvar game = new _Game2.default('game', 512, 256);\n\n(function gameLoop() {\n    game.render();\n    requestAnimationFrame(gameLoop);\n})();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvaW5kZXguanM/MWZkZiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgJy4vc3R5bGVzL2dhbWUuY3NzJztcbmltcG9ydCBHYW1lIGZyb20gJy4vcGFydGlhbHMvR2FtZSdcblxuLy8gY3JlYXRlIGEgZ2FtZSBpbnN0YW5jZVxuY29uc3QgZ2FtZSA9IG5ldyBHYW1lKCdnYW1lJywgNTEyLCAyNTYpO1xuXG4oZnVuY3Rpb24gZ2FtZUxvb3AoKSB7XG4gICAgZ2FtZS5yZW5kZXIoKTtcbiAgICByZXF1ZXN0QW5pbWF0aW9uRnJhbWUoZ2FtZUxvb3ApO1xufSkoKTtcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzcmMvaW5kZXguanMiXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUFBO0FBQ0E7Ozs7O0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///4\n");
 
 /***/ }),
 /* 5 */
+/* no static exports found */
+/* all exports used */
+/*!******************************!*\
+  !*** ./src/partials/Ball.js ***!
+  \******************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _settings = __webpack_require__(0);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Ball = function () {
-  function Ball(radius, boardWidth, boardHeight, x, y) {
-    _classCallCheck(this, Ball);
-
-    this.radius = radius;
-    this.boardWidth = boardWidth;
-    this.boardHeight = boardHeight;
-    this.x = x;
-    this.y = y;
-    this.direction = 1;
-    this.ping = new Audio('public/sounds/smb_stomp.wav');
-    this.reset();
-  }
-
-  _createClass(Ball, [{
-    key: 'reset',
-    value: function reset() {
-      this.x = this.boardWidth / 2;
-      this.y = this.boardHeight / 2;
-
-      this.vy = 0;
-      // a number between -5 and 5, based on this.vy
-      // this guarantees that vy is large, vx is small (vice versa)
-      while (this.vy === 0) {
-        this.vy = Math.floor(Math.random() * 10 - 5);
-      }
-      this.vx = this.direction * (11 - Math.abs(this.vy));
-    }
-  }, {
-    key: 'goal',
-    value: function goal(player) {
-      player.score++;
-      this.reset();
-    }
-  }, {
-    key: 'wallCollision',
-    value: function wallCollision() {
-      var hitLeft = this.x - this.radius <= 0;
-      var hitRight = this.x + this.radius >= this.boardWidth;
-      var hitTop = this.y - this.radius <= 0;
-      var hitBottom = this.y + this.radius >= this.boardHeight;
-
-      if (hitTop || hitBottom) {
-        this.vy = -this.vy;
-      } else if (hitLeft || hitRight) {
-        // this.reset();
-        this.vx = -this.vx;
-      }
-    }
-  }, {
-    key: 'paddleCollision',
-    value: function paddleCollision(player1, player2) {
-      if (this.vx > 0) {
-        var paddle = player2.coordinates(player2.x, player2.y, player2.width, player2.height);
-
-        var _paddle = _slicedToArray(paddle, 4),
-            leftX = _paddle[0],
-            rightX = _paddle[1],
-            topY = _paddle[2],
-            bottomY = _paddle[3];
-
-        if (this.x + this.radius >= leftX && //right edge of the ball is >= left edge of the paddle
-        this.x + this.radius <= rightX //right edge of the ball is <= right edge of the paddle
-        && this.y >= topY && this.y <= bottomY // ball Y is >= paddle top Y and <= paddle bottom Y
-        ) {
-            this.vx = -this.vx;
-            this.ping.play();
-          }
-      } else {
-        var _paddle2 = player1.coordinates(player1.x, player1.y, player1.width, player1.height);
-
-        var _paddle3 = _slicedToArray(_paddle2, 4),
-            _leftX = _paddle3[0],
-            _rightX = _paddle3[1],
-            _topY = _paddle3[2],
-            _bottomY = _paddle3[3];
-
-        if (this.x - this.radius <= _rightX && this.x - this.radius >= _leftX && this.y >= _topY && this.y <= _bottomY) {
-          this.vx = -this.vx;
-          this.ping.play();
-        }
-      }
-    }
-  }, {
-    key: 'render',
-    value: function render(svg, player1, player2) {
-      //draw ball
-
-      this.x += this.vx;
-      this.y += this.vy;
-      this.wallCollision();
-      this.paddleCollision(player1, player2);
-      var circle = document.createElementNS(_settings.SVG_NS, 'circle');
-      circle.setAttributeNS(null, 'r', this.radius), circle.setAttributeNS(null, 'fill', '#DCA123'), circle.setAttributeNS(null, 'cx', this.x), circle.setAttributeNS(null, 'cy', this.y);
-      svg.appendChild(circle);
-
-      var rightGoal = this.x + this.radius >= this.boardWidth;
-      var leftGoal = this.x - this.radius <= 0;
-      if (rightGoal) {
-        this.goal(player1);
-        this.direction = 1;
-      } else if (leftGoal) {
-        this.goal(player2);
-        this.direction = -1;
-      }
-    }
-  }]);
-
-  return Ball;
-}();
-
-exports.default = Ball;
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"]) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); } }; }();\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _settings = __webpack_require__(/*! ../settings */ 0);\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Ball = function () {\n  function Ball(radius, boardWidth, boardHeight, x, y) {\n    _classCallCheck(this, Ball);\n\n    this.radius = radius;\n    this.boardWidth = boardWidth;\n    this.boardHeight = boardHeight;\n    this.x = x;\n    this.y = y;\n    this.direction = 1;\n    this.ping = new Audio('public/sounds/smb_stomp.wav');\n    this.reset();\n  }\n\n  _createClass(Ball, [{\n    key: 'reset',\n    value: function reset() {\n      this.x = this.boardWidth / 2;\n      this.y = this.boardHeight / 2;\n\n      this.vy = 0;\n      // a number between -5 and 5, based on this.vy\n      // this guarantees that vy is large, vx is small (vice versa)\n      while (this.vy === 0) {\n        this.vy = Math.floor(Math.random() * 10 - 5);\n      }\n      this.vx = this.direction * (11 - Math.abs(this.vy));\n    }\n  }, {\n    key: 'goal',\n    value: function goal(player) {\n      player.score++;\n      this.reset();\n    }\n  }, {\n    key: 'wallCollision',\n    value: function wallCollision() {\n      var hitLeft = this.x - this.radius <= 0;\n      var hitRight = this.x + this.radius >= this.boardWidth;\n      var hitTop = this.y - this.radius <= 0;\n      var hitBottom = this.y + this.radius >= this.boardHeight;\n\n      if (hitTop || hitBottom) {\n        this.vy = -this.vy;\n      } else if (hitLeft || hitRight) {\n        // this.reset();\n        this.vx = -this.vx;\n      }\n    }\n  }, {\n    key: 'paddleCollision',\n    value: function paddleCollision(player1, player2) {\n      if (this.vx > 0) {\n        var paddle = player2.coordinates(player2.x, player2.y, player2.width, player2.height);\n\n        var _paddle = _slicedToArray(paddle, 4),\n            leftX = _paddle[0],\n            rightX = _paddle[1],\n            topY = _paddle[2],\n            bottomY = _paddle[3];\n\n        if (this.x + this.radius >= leftX && //right edge of the ball is >= left edge of the paddle\n        this.x + this.radius <= rightX //right edge of the ball is <= right edge of the paddle\n        && this.y >= topY && this.y <= bottomY // ball Y is >= paddle top Y and <= paddle bottom Y\n        ) {\n            this.vx = -this.vx;\n            this.ping.play();\n          }\n      } else {\n        var _paddle2 = player1.coordinates(player1.x, player1.y, player1.width, player1.height);\n\n        var _paddle3 = _slicedToArray(_paddle2, 4),\n            _leftX = _paddle3[0],\n            _rightX = _paddle3[1],\n            _topY = _paddle3[2],\n            _bottomY = _paddle3[3];\n\n        if (this.x - this.radius <= _rightX && this.x - this.radius >= _leftX && this.y >= _topY && this.y <= _bottomY) {\n          this.vx = -this.vx;\n          this.ping.play();\n        }\n      }\n    }\n  }, {\n    key: 'render',\n    value: function render(svg, player1, player2) {\n      //draw ball\n\n      this.x += this.vx;\n      this.y += this.vy;\n      this.wallCollision();\n      this.paddleCollision(player1, player2);\n      var circle = document.createElementNS(_settings.SVG_NS, 'circle');\n      circle.setAttributeNS(null, 'r', this.radius), circle.setAttributeNS(null, 'fill', '#DCA123'), circle.setAttributeNS(null, 'cx', this.x), circle.setAttributeNS(null, 'cy', this.y);\n      svg.appendChild(circle);\n\n      var rightGoal = this.x + this.radius >= this.boardWidth;\n      var leftGoal = this.x - this.radius <= 0;\n      if (rightGoal) {\n        this.goal(player1);\n        this.direction = 1;\n      } else if (leftGoal) {\n        this.goal(player2);\n        this.direction = -1;\n      }\n    }\n  }]);\n\n  return Ball;\n}();\n\nexports.default = Ball;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNS5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvcGFydGlhbHMvQmFsbC5qcz84MTI0Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFNWR19OUyB9IGZyb20gJy4uL3NldHRpbmdzJztcbmV4cG9ydCBkZWZhdWx0IGNsYXNzIEJhbGwge1xuICBjb25zdHJ1Y3RvcihyYWRpdXMsIGJvYXJkV2lkdGgsIGJvYXJkSGVpZ2h0LCB4LCB5KSB7XG4gICAgdGhpcy5yYWRpdXMgPSByYWRpdXM7XG4gICAgdGhpcy5ib2FyZFdpZHRoID0gYm9hcmRXaWR0aDtcbiAgICB0aGlzLmJvYXJkSGVpZ2h0ID0gYm9hcmRIZWlnaHQ7XG4gICAgdGhpcy54ID0geDtcbiAgICB0aGlzLnkgPSB5O1xuICAgIHRoaXMuZGlyZWN0aW9uID0gMTtcbiAgICB0aGlzLnBpbmcgPSBuZXcgQXVkaW8oJ3B1YmxpYy9zb3VuZHMvc21iX3N0b21wLndhdicpO1xuICAgIHRoaXMucmVzZXQoKTtcbiAgfVxuXG4gIHJlc2V0KCkge1xuICAgIHRoaXMueCA9IHRoaXMuYm9hcmRXaWR0aCAvIDI7XG4gICAgdGhpcy55ID0gdGhpcy5ib2FyZEhlaWdodCAvIDI7XG5cbiAgICB0aGlzLnZ5ID0gMDtcbiAgICAvLyBhIG51bWJlciBiZXR3ZWVuIC01IGFuZCA1LCBiYXNlZCBvbiB0aGlzLnZ5XG4gICAgLy8gdGhpcyBndWFyYW50ZWVzIHRoYXQgdnkgaXMgbGFyZ2UsIHZ4IGlzIHNtYWxsICh2aWNlIHZlcnNhKVxuICAgIHdoaWxlKCB0aGlzLnZ5ID09PSAwKSB7XG4gICAgICB0aGlzLnZ5ID0gTWF0aC5mbG9vcihNYXRoLnJhbmRvbSgpICogMTAgLSA1KTtcbiAgICB9XG4gICAgdGhpcy52eCA9IHRoaXMuZGlyZWN0aW9uICogKDExIC0gTWF0aC5hYnModGhpcy52eSkpO1xuICB9XG5cbiAgZ29hbChwbGF5ZXIpe1xuICAgIHBsYXllci5zY29yZSsrO1xuICAgIHRoaXMucmVzZXQoKTtcbiAgfVxuXG4gIHdhbGxDb2xsaXNpb24oKXtcbiAgICBjb25zdCBoaXRMZWZ0ID0gdGhpcy54IC0gdGhpcy5yYWRpdXMgPD0gMDtcbiAgICBjb25zdCBoaXRSaWdodCA9IHRoaXMueCArIHRoaXMucmFkaXVzID49IHRoaXMuYm9hcmRXaWR0aDtcbiAgICBjb25zdCBoaXRUb3AgPSB0aGlzLnkgLSB0aGlzLnJhZGl1cyA8PSAwO1xuICAgIGNvbnN0IGhpdEJvdHRvbSA9IHRoaXMueSArIHRoaXMucmFkaXVzID49IHRoaXMuYm9hcmRIZWlnaHQ7XG5cbiAgICBpZihoaXRUb3AgfHwgaGl0Qm90dG9tKXtcbiAgICAgIHRoaXMudnkgPSAtdGhpcy52eTtcbiAgICB9IGVsc2UgaWYgKGhpdExlZnQgfHwgaGl0UmlnaHQpe1xuICAgICAgLy8gdGhpcy5yZXNldCgpO1xuICAgICAgdGhpcy52eCA9IC10aGlzLnZ4O1xuICAgIH1cbiAgfVxuXG4gIHBhZGRsZUNvbGxpc2lvbihwbGF5ZXIxLCBwbGF5ZXIyKXtcbiAgICBpZih0aGlzLnZ4ID4gMCl7XG4gICAgICBsZXQgcGFkZGxlID0gcGxheWVyMi5jb29yZGluYXRlcyhwbGF5ZXIyLngsIHBsYXllcjIueSwgcGxheWVyMi53aWR0aCwgcGxheWVyMi5oZWlnaHQpO1xuICAgICAgbGV0IFtsZWZ0WCwgcmlnaHRYLCB0b3BZLCBib3R0b21ZXSA9IHBhZGRsZTtcbiAgICAgIFxuICAgIGlmKFxuICAgICAgKHRoaXMueCArdGhpcy5yYWRpdXMgPj0gbGVmdFgpIC8vcmlnaHQgZWRnZSBvZiB0aGUgYmFsbCBpcyA+PSBsZWZ0IGVkZ2Ugb2YgdGhlIHBhZGRsZVxuICAgICAgJiYgKHRoaXMueCArIHRoaXMucmFkaXVzIDw9IHJpZ2h0WCkgLy9yaWdodCBlZGdlIG9mIHRoZSBiYWxsIGlzIDw9IHJpZ2h0IGVkZ2Ugb2YgdGhlIHBhZGRsZVxuICAgICAgJiYgKHRoaXMueSA+PSB0b3BZICYmIHRoaXMueSA8PSBib3R0b21ZKSAvLyBiYWxsIFkgaXMgPj0gcGFkZGxlIHRvcCBZIGFuZCA8PSBwYWRkbGUgYm90dG9tIFlcbiAgICAgIClcbiAgICAgIHtcbiAgICAgICAgdGhpcy52eCA9IC10aGlzLnZ4O1xuICAgICAgICB0aGlzLnBpbmcucGxheSgpO1xuICAgICAgfVxuXG4gICAgfSBlbHNlIHtcbiAgICAgIGxldCBwYWRkbGUgPSBwbGF5ZXIxLmNvb3JkaW5hdGVzKHBsYXllcjEueCwgcGxheWVyMS55LCBwbGF5ZXIxLndpZHRoLCBwbGF5ZXIxLmhlaWdodCk7XG4gICAgICBsZXQgW2xlZnRYLCByaWdodFgsIHRvcFksIGJvdHRvbVldID0gcGFkZGxlO1xuXG4gICAgaWYoXG4gICAgICAodGhpcy54IC0gdGhpcy5yYWRpdXMgPD0gcmlnaHRYKVxuICAgICAgJiYgKHRoaXMueCAtIHRoaXMucmFkaXVzID49IGxlZnRYKVxuICAgICAgJiYgKHRoaXMueSA+PSB0b3BZICYmIHRoaXMueSA8PSBib3R0b21ZKVxuICAgIClcbiAgICB7XG4gICAgICB0aGlzLnZ4ID0gLXRoaXMudng7XG4gICAgdGhpcy5waW5nLnBsYXkoKTtcbiAgICB9XG4gIH1cbn1cblxuICByZW5kZXIoc3ZnLCBwbGF5ZXIxLCBwbGF5ZXIyKXtcbiAgICAgIC8vZHJhdyBiYWxsXG5cbiAgICB0aGlzLnggKz0gdGhpcy52eDtcbiAgICB0aGlzLnkgKz0gdGhpcy52eTtcbiAgICB0aGlzLndhbGxDb2xsaXNpb24oKTtcbiAgICB0aGlzLnBhZGRsZUNvbGxpc2lvbihwbGF5ZXIxLCBwbGF5ZXIyKTtcbiAgICBsZXQgY2lyY2xlID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKFNWR19OUywgJ2NpcmNsZScpO1xuICAgIGNpcmNsZS5zZXRBdHRyaWJ1dGVOUyhudWxsLCAncicsIHRoaXMucmFkaXVzKSxcbiAgICBjaXJjbGUuc2V0QXR0cmlidXRlTlMobnVsbCwgJ2ZpbGwnLCAnI0RDQTEyMycpLFxuICAgIGNpcmNsZS5zZXRBdHRyaWJ1dGVOUyhudWxsLCAnY3gnLCB0aGlzLngpLFxuICAgIGNpcmNsZS5zZXRBdHRyaWJ1dGVOUyhudWxsLCAnY3knLCB0aGlzLnkpO1xuICAgIHN2Zy5hcHBlbmRDaGlsZChjaXJjbGUpO1xuXG4gICAgY29uc3QgcmlnaHRHb2FsID0gdGhpcy54ICsgdGhpcy5yYWRpdXMgPj0gdGhpcy5ib2FyZFdpZHRoO1xuICAgIGNvbnN0IGxlZnRHb2FsID0gdGhpcy54IC0gdGhpcy5yYWRpdXMgPD0wO1xuICAgIGlmIChyaWdodEdvYWwpe1xuICAgICAgdGhpcy5nb2FsKHBsYXllcjEpO1xuICAgICAgdGhpcy5kaXJlY3Rpb24gPSAxO1xuICAgIH0gZWxzZSBpZiAobGVmdEdvYWwpe1xuICAgICAgdGhpcy5nb2FsKHBsYXllcjIpO1xuICAgICAgdGhpcy5kaXJlY3Rpb24gPSAtMTtcbiAgICB9XG4gIH1cblxufVxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzcmMvcGFydGlhbHMvQmFsbC5qcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBO0FBQ0E7OztBQUFBO0FBQ0E7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7OztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7OztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUZBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUdBO0FBRUE7QUFEQTtBQURBO0FBTUE7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBRkE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBR0E7QUFNQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFJQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Ozs7OztBQWxHQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///5\n");
 
 /***/ }),
 /* 6 */
+/* no static exports found */
+/* all exports used */
+/*!*******************************!*\
+  !*** ./src/partials/Board.js ***!
+  \*******************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _settings = __webpack_require__(0);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Board = function () {
-  function Board(width, height) {
-    _classCallCheck(this, Board);
-
-    this.width = width;
-    this.height = height;
-  }
-
-  _createClass(Board, [{
-    key: 'render',
-    value: function render(svg) {
-      var rect = document.createElementNS(_settings.SVG_NS, 'rect');
-      rect.setAttributeNS(null, 'fill', '#238EDC');
-      rect.setAttributeNS(null, 'height', this.height);
-      rect.setAttributeNS(null, 'width', this.width);
-      rect.setAttributeNS(null, 'stroke', 'black');
-      rect.setAttributeNS(null, 'stroke-width', '4');
-
-      var line = document.createElementNS(_settings.SVG_NS, 'line');
-      line.setAttributeNS(null, 'x1', this.width / 2);
-      line.setAttributeNS(null, 'y1', 0);
-      line.setAttributeNS(null, 'x2', this.width / 2);
-      line.setAttributeNS(null, 'y2', this.width);
-      line.setAttributeNS(null, 'stroke', 'black');
-      line.setAttributeNS(null, 'stroke-width', '4');
-      line.setAttributeNS(null, 'stroke-dasharray', '20, 15');
-
-      svg.appendChild(rect);
-      svg.appendChild(line);
-    }
-  }]);
-
-  return Board;
-}();
-
-exports.default = Board;
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _settings = __webpack_require__(/*! ../settings */ 0);\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Board = function () {\n  function Board(width, height) {\n    _classCallCheck(this, Board);\n\n    this.width = width;\n    this.height = height;\n  }\n\n  _createClass(Board, [{\n    key: 'render',\n    value: function render(svg) {\n      var rect = document.createElementNS(_settings.SVG_NS, 'rect');\n      rect.setAttributeNS(null, 'fill', '#238EDC');\n      rect.setAttributeNS(null, 'height', this.height);\n      rect.setAttributeNS(null, 'width', this.width);\n      rect.setAttributeNS(null, 'stroke', 'black');\n      rect.setAttributeNS(null, 'stroke-width', '4');\n\n      var line = document.createElementNS(_settings.SVG_NS, 'line');\n      line.setAttributeNS(null, 'x1', this.width / 2);\n      line.setAttributeNS(null, 'y1', 0);\n      line.setAttributeNS(null, 'x2', this.width / 2);\n      line.setAttributeNS(null, 'y2', this.width);\n      line.setAttributeNS(null, 'stroke', 'black');\n      line.setAttributeNS(null, 'stroke-width', '4');\n      line.setAttributeNS(null, 'stroke-dasharray', '20, 15');\n\n      svg.appendChild(rect);\n      svg.appendChild(line);\n    }\n  }]);\n\n  return Board;\n}();\n\nexports.default = Board;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNi5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvcGFydGlhbHMvQm9hcmQuanM/NmZhNyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBTVkdfTlMgfSBmcm9tICcuLi9zZXR0aW5ncyc7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIEJvYXJkIHtcbiAgY29uc3RydWN0b3Iod2lkdGgsIGhlaWdodCkge1xuICAgIHRoaXMud2lkdGggPSB3aWR0aDtcbiAgICB0aGlzLmhlaWdodCA9IGhlaWdodDtcbiAgfVxuICByZW5kZXIoc3ZnKSB7XG4gICAgbGV0IHJlY3QgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoU1ZHX05TLCAncmVjdCcpO1xuICAgIHJlY3Quc2V0QXR0cmlidXRlTlMobnVsbCwgJ2ZpbGwnLCAnIzIzOEVEQycpO1xuICAgIHJlY3Quc2V0QXR0cmlidXRlTlMobnVsbCwgJ2hlaWdodCcsIHRoaXMuaGVpZ2h0KTtcbiAgICByZWN0LnNldEF0dHJpYnV0ZU5TKG51bGwsICd3aWR0aCcsIHRoaXMud2lkdGgpO1xuICAgIHJlY3Quc2V0QXR0cmlidXRlTlMobnVsbCwgJ3N0cm9rZScsICdibGFjaycpO1xuICAgIHJlY3Quc2V0QXR0cmlidXRlTlMobnVsbCwgJ3N0cm9rZS13aWR0aCcsICc0Jyk7XG5cblx0XHRsZXQgbGluZSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUyhTVkdfTlMsICdsaW5lJyk7XG5cdFx0bGluZS5zZXRBdHRyaWJ1dGVOUyhudWxsLCAneDEnLCAodGhpcy53aWR0aC8yKSApO1xuXHRcdGxpbmUuc2V0QXR0cmlidXRlTlMobnVsbCwgJ3kxJywgMCk7XG5cdFx0bGluZS5zZXRBdHRyaWJ1dGVOUyhudWxsLCAneDInLCAodGhpcy53aWR0aC8yKSApO1xuXHRcdGxpbmUuc2V0QXR0cmlidXRlTlMobnVsbCwgJ3kyJywgdGhpcy53aWR0aCk7XG5cdFx0bGluZS5zZXRBdHRyaWJ1dGVOUyhudWxsLCAnc3Ryb2tlJywgJ2JsYWNrJyk7XG5cdFx0bGluZS5zZXRBdHRyaWJ1dGVOUyhudWxsLCAnc3Ryb2tlLXdpZHRoJywgJzQnKTtcblx0XHRsaW5lLnNldEF0dHJpYnV0ZU5TKG51bGwsICdzdHJva2UtZGFzaGFycmF5JywgJzIwLCAxNScpO1xuXG4gICAgc3ZnLmFwcGVuZENoaWxkKHJlY3QpO1xuICAgIHN2Zy5hcHBlbmRDaGlsZChsaW5lKTtcblxuICB9XG59XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHNyYy9wYXJ0aWFscy9Cb2FyZC5qcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7QUFBQTtBQUNBOzs7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBOzs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBOzs7Ozs7QUF6QkEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///6\n");
 
 /***/ }),
 /* 7 */
+/* no static exports found */
+/* all exports used */
+/*!********************************!*\
+  !*** ./src/partials/Paddle.js ***!
+  \********************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _settings = __webpack_require__(0);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Paddle = function () {
-  function Paddle(boardHeight, width, height, x, y, up, down, player) {
-    var _this = this;
-
-    _classCallCheck(this, Paddle);
-
-    this.boardHeight = boardHeight;
-    this.width = width;
-    this.height = height;
-    this.x = x;
-    this.y = y;
-    this.speed = 5;
-    this.score = 0;
-    this.player = player;
-    this.keyState = {};
-
-    document.addEventListener('keydown', function (event) {
-      _this.keyState[event.key || event.which] = true;
-    }, true);
-
-    document.addEventListener('keyup', function (event) {
-      _this.keyState[event.key || event.which] = false;
-    }, true);
-  }
-  // constructor ends
-
-  _createClass(Paddle, [{
-    key: 'up',
-    value: function up() {
-      this.y = Math.max(this.y - this.speed, 0);
-    }
-  }, {
-    key: 'down',
-    value: function down() {
-      this.y = Math.min(this.y + this.speed, this.boardHeight - this.height);
-    }
-  }, {
-    key: 'coordinates',
-    value: function coordinates(x, y, width, height) {
-      var leftX = x;
-      var rightX = x + width;
-      var topY = y;
-      var bottomY = y + height;
-      return [leftX, rightX, topY, bottomY];
-    }
-
-    // render svg images
-
-  }, {
-    key: 'render',
-    value: function render(svg) {
-
-      if (this.keyState['a'] && this.player === 'player1') {
-        this.up();
-      }
-      if (this.keyState['z'] && this.player === 'player1') {
-        this.down();
-      }
-      if (this.keyState['ArrowUp'] && this.player === 'player2') {
-        this.up();
-      }
-      if (this.keyState['ArrowDown'] && this.player === 'player2') {
-        this.down();
-      }
-
-      var rect = document.createElementNS(_settings.SVG_NS, 'rect');
-      rect.setAttributeNS(null, 'fill', 'white');
-      rect.setAttributeNS(null, 'width', this.width);
-      rect.setAttributeNS(null, 'height', this.height);
-      rect.setAttributeNS(null, 'x', this.x);
-      rect.setAttributeNS(null, 'y', this.y);
-      // rect.setAttributeNS(null, 'speed', this.speed);
-
-
-      svg.appendChild(rect);
-    }
-  }]);
-
-  return Paddle;
-}();
-
-exports.default = Paddle;
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _settings = __webpack_require__(/*! ../settings */ 0);\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Paddle = function () {\n  function Paddle(boardHeight, width, height, x, y, up, down, player) {\n    var _this = this;\n\n    _classCallCheck(this, Paddle);\n\n    this.boardHeight = boardHeight;\n    this.width = width;\n    this.height = height;\n    this.x = x;\n    this.y = y;\n    this.speed = 5;\n    this.score = 0;\n    this.player = player;\n    this.keyState = {};\n\n    document.addEventListener('keydown', function (event) {\n      _this.keyState[event.key || event.which] = true;\n    }, true);\n\n    document.addEventListener('keyup', function (event) {\n      _this.keyState[event.key || event.which] = false;\n    }, true);\n  }\n  // constructor ends\n\n  _createClass(Paddle, [{\n    key: 'up',\n    value: function up() {\n      this.y = Math.max(this.y - this.speed, 0);\n    }\n  }, {\n    key: 'down',\n    value: function down() {\n      this.y = Math.min(this.y + this.speed, this.boardHeight - this.height);\n    }\n  }, {\n    key: 'coordinates',\n    value: function coordinates(x, y, width, height) {\n      var leftX = x;\n      var rightX = x + width;\n      var topY = y;\n      var bottomY = y + height;\n      return [leftX, rightX, topY, bottomY];\n    }\n\n    // render svg images\n\n  }, {\n    key: 'render',\n    value: function render(svg) {\n\n      if (this.keyState['a'] && this.player === 'player1') {\n        this.up();\n      }\n      if (this.keyState['z'] && this.player === 'player1') {\n        this.down();\n      }\n      if (this.keyState['ArrowUp'] && this.player === 'player2') {\n        this.up();\n      }\n      if (this.keyState['ArrowDown'] && this.player === 'player2') {\n        this.down();\n      }\n\n      var rect = document.createElementNS(_settings.SVG_NS, 'rect');\n      rect.setAttributeNS(null, 'fill', 'white');\n      rect.setAttributeNS(null, 'width', this.width);\n      rect.setAttributeNS(null, 'height', this.height);\n      rect.setAttributeNS(null, 'x', this.x);\n      rect.setAttributeNS(null, 'y', this.y);\n      // rect.setAttributeNS(null, 'speed', this.speed);\n\n\n      svg.appendChild(rect);\n    }\n  }]);\n\n  return Paddle;\n}();\n\nexports.default = Paddle;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvcGFydGlhbHMvUGFkZGxlLmpzP2UyODUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgU1ZHX05TIH0gZnJvbSAnLi4vc2V0dGluZ3MnO1xuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBQYWRkbGUge1xuICBjb25zdHJ1Y3Rvcihib2FyZEhlaWdodCwgd2lkdGgsIGhlaWdodCwgeCwgeSwgdXAsIGRvd24sIHBsYXllcikge1xuICAgIHRoaXMuYm9hcmRIZWlnaHQgPSBib2FyZEhlaWdodDtcbiAgICB0aGlzLndpZHRoID0gd2lkdGg7XG4gICAgdGhpcy5oZWlnaHQgPSBoZWlnaHQ7XG4gICAgdGhpcy54ID0geDtcbiAgICB0aGlzLnkgPSB5O1xuICAgIHRoaXMuc3BlZWQgPSA1O1xuICAgIHRoaXMuc2NvcmUgPSAwO1xuICAgIHRoaXMucGxheWVyID0gcGxheWVyO1xuICAgIHRoaXMua2V5U3RhdGUgPSB7fTtcblxuICAgIGRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ2tleWRvd24nLCBldmVudCA9PiB7XG4gICAgICB0aGlzLmtleVN0YXRlW2V2ZW50LmtleSB8fCBldmVudC53aGljaF0gPSB0cnVlO1xuICAgIH0sIHRydWUpO1xuXG4gICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigna2V5dXAnLCBldmVudCA9PiB7XG4gICAgICB0aGlzLmtleVN0YXRlW2V2ZW50LmtleSB8fCBldmVudC53aGljaF0gPSBmYWxzZTtcbiAgICB9LCB0cnVlKTtcblxuICB9IFxuICAvLyBjb25zdHJ1Y3RvciBlbmRzXG5cbiAgdXAoKXtcbiAgICB0aGlzLnkgPSBNYXRoLm1heCh0aGlzLnkgLSB0aGlzLnNwZWVkLCAwKTtcbiAgfVxuXG4gIGRvd24oKXtcbiAgICB0aGlzLnkgPSBNYXRoLm1pbih0aGlzLnkgKyB0aGlzLnNwZWVkLCB0aGlzLmJvYXJkSGVpZ2h0IC0gdGhpcy5oZWlnaHQpO1xuICB9XG4gIFxuICBjb29yZGluYXRlcyh4LCB5LCB3aWR0aCwgaGVpZ2h0KSB7XG4gICAgbGV0IGxlZnRYID0geDtcbiAgICBsZXQgcmlnaHRYID0geCArIHdpZHRoO1xuICAgIGxldCB0b3BZID0geTtcbiAgICBsZXQgYm90dG9tWSA9IHkgKyBoZWlnaHQ7XG4gICAgcmV0dXJuIFtsZWZ0WCwgcmlnaHRYLCB0b3BZLCBib3R0b21ZXTtcbiAgfVxuXG4gIC8vIHJlbmRlciBzdmcgaW1hZ2VzXG5cbnJlbmRlcihzdmcpe1xuXG4gIGlmICh0aGlzLmtleVN0YXRlWydhJ10gJiYgdGhpcy5wbGF5ZXIgPT09ICdwbGF5ZXIxJykge1xuICAgIHRoaXMudXAoKTtcbiAgfVxuICBpZiAodGhpcy5rZXlTdGF0ZVsneiddICYmIHRoaXMucGxheWVyID09PSAncGxheWVyMScpIHtcbiAgICB0aGlzLmRvd24oKTtcbiAgfVxuICBpZiAodGhpcy5rZXlTdGF0ZVsnQXJyb3dVcCddICYmIHRoaXMucGxheWVyID09PSAncGxheWVyMicpIHtcbiAgICB0aGlzLnVwKCk7XG4gIH1cbiAgaWYgKHRoaXMua2V5U3RhdGVbJ0Fycm93RG93biddICYmIHRoaXMucGxheWVyID09PSAncGxheWVyMicpIHtcbiAgICB0aGlzLmRvd24oKTtcbiAgfVxuXG4gIGxldCByZWN0ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKFNWR19OUywgJ3JlY3QnKTtcbiAgcmVjdC5zZXRBdHRyaWJ1dGVOUyhudWxsLCAnZmlsbCcsICd3aGl0ZScpO1xuICByZWN0LnNldEF0dHJpYnV0ZU5TKG51bGwsICd3aWR0aCcsIHRoaXMud2lkdGgpO1xuICByZWN0LnNldEF0dHJpYnV0ZU5TKG51bGwsICdoZWlnaHQnLCB0aGlzLmhlaWdodCk7XG4gIHJlY3Quc2V0QXR0cmlidXRlTlMobnVsbCwgJ3gnLCB0aGlzLngpO1xuICByZWN0LnNldEF0dHJpYnV0ZU5TKG51bGwsICd5JywgdGhpcy55KTtcbiAgLy8gcmVjdC5zZXRBdHRyaWJ1dGVOUyhudWxsLCAnc3BlZWQnLCB0aGlzLnNwZWVkKTtcblxuICBcbiAgc3ZnLmFwcGVuZENoaWxkKHJlY3QpO1xufVxuXG59XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHNyYy9wYXJ0aWFscy9QYWRkbGUuanMiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7O0FBQUE7QUFDQTs7O0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUFEQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTs7O0FBQ0E7QUFDQTtBQUNBOzs7QUFFQTtBQUNBO0FBQ0E7OztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7Ozs7QUFsRUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///7\n");
 
 /***/ }),
 /* 8 */
+/* no static exports found */
+/* all exports used */
+/*!*******************************!*\
+  !*** ./src/partials/Score.js ***!
+  \*******************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _settings = __webpack_require__(0);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Score = function () {
-  function Score(x, y, size) {
-    _classCallCheck(this, Score);
-
-    this.x = x;
-    this.y = y;
-    this.size = size;
-  }
-
-  _createClass(Score, [{
-    key: 'render',
-    value: function render(svg, score) {
-      var text = document.createElementNS(_settings.SVG_NS, 'text');
-      text.setAttributeNS(null, 'x', this.x);
-      text.setAttributeNS(null, 'y', this.y);
-      text.setAttributeNS(null, 'font-family', '"Silkscreen Web", monotype');
-      text.setAttributeNS(null, 'font-size', this.size);
-      text.setAttributeNS(null, 'fill', 'white');
-      text.textContent = score;
-
-      svg.appendChild(text);
-    }
-  }]);
-
-  return Score;
-}();
-
-exports.default = Score;
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _settings = __webpack_require__(/*! ../settings */ 0);\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Score = function () {\n  function Score(x, y, size) {\n    _classCallCheck(this, Score);\n\n    this.x = x;\n    this.y = y;\n    this.size = size;\n  }\n\n  _createClass(Score, [{\n    key: 'render',\n    value: function render(svg, score) {\n      var text = document.createElementNS(_settings.SVG_NS, 'text');\n      text.setAttributeNS(null, 'x', this.x);\n      text.setAttributeNS(null, 'y', this.y);\n      text.setAttributeNS(null, 'font-family', '\"Silkscreen Web\", monotype');\n      text.setAttributeNS(null, 'font-size', this.size);\n      text.setAttributeNS(null, 'fill', 'white');\n      text.textContent = score;\n\n      svg.appendChild(text);\n    }\n  }]);\n\n  return Score;\n}();\n\nexports.default = Score;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiOC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvcGFydGlhbHMvU2NvcmUuanM/Y2JmMCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBTVkdfTlMgfSBmcm9tICcuLi9zZXR0aW5ncyc7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIFNjb3JlIHtcbiAgY29uc3RydWN0b3IoeCwgeSwgc2l6ZSkge1xuICAgIHRoaXMueCA9IHg7XG4gICAgdGhpcy55ID0geTtcbiAgICB0aGlzLnNpemUgPSBzaXplO1xuICB9XG4gIFxuICByZW5kZXIoc3ZnLCBzY29yZSl7XG4gICAgbGV0IHRleHQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoU1ZHX05TLCAndGV4dCcpO1xuICAgIHRleHQuc2V0QXR0cmlidXRlTlMobnVsbCwgJ3gnLCB0aGlzLnggKTtcbiAgICB0ZXh0LnNldEF0dHJpYnV0ZU5TKG51bGwsICd5JywgdGhpcy55KTtcbiAgICB0ZXh0LnNldEF0dHJpYnV0ZU5TKG51bGwsICdmb250LWZhbWlseScsICdcIlNpbGtzY3JlZW4gV2ViXCIsIG1vbm90eXBlJyk7XG4gICAgdGV4dC5zZXRBdHRyaWJ1dGVOUyhudWxsLCAnZm9udC1zaXplJywgdGhpcy5zaXplKTtcbiAgICB0ZXh0LnNldEF0dHJpYnV0ZU5TKG51bGwsICdmaWxsJywgJ3doaXRlJyk7XG4gICAgdGV4dC50ZXh0Q29udGVudCA9IHNjb3JlO1xuXG4gICAgc3ZnLmFwcGVuZENoaWxkKHRleHQpO1xuICB9XG5cbn1cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gc3JjL3BhcnRpYWxzL1Njb3JlLmpzIl0sIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFBO0FBQ0E7OztBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7O0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7Ozs7O0FBakJBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///8\n");
 
 /***/ }),
 /* 9 */
+/* no static exports found */
+/* all exports used */
+/*!********************************************!*\
+  !*** ./~/css-loader!./src/styles/game.css ***!
+  \********************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)();
-// imports
-
-
-// module
-exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n}\nol, ul {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}\n\n/**\n * FONTS\n */\n\n@font-face {\n  font-family: 'Silkscreen Web';\n  src: url(" + __webpack_require__(1) + ");\n  src: url(" + __webpack_require__(1) + "?#iefix) format('embedded-opentype'),\n    url(" + __webpack_require__(13) + ") format('woff'),\n    url(" + __webpack_require__(12) + ") format('truetype'),\n    url(" + __webpack_require__(11) + "#silkscreennormal) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\n/**\n * GAME\n */\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  font-family: 'Silkscreen Web', monotype;\n  color: #DCA123;\n  height: 80vh;\n  justify-content: center;\n  width: 100%;\n  background-color: black;\n  background-image: url('/../../public/images/supermario.jpg');\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 100%;\n}\n\nh1 {\n  font-size: 2.5rem;\n  margin-bottom: 1rem; \n  text-align: center;\n}\n", ""]);
-
-// exports
-
+eval("exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 10)();\n// imports\n\n\n// module\nexports.push([module.i, \"/* http://meyerweb.com/eric/tools/css/reset/ \\n   v2.0 | 20110126\\n   License: none (public domain)\\n*/\\n\\nhtml, body, div, span, applet, object, iframe,\\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\\na, abbr, acronym, address, big, cite, code,\\ndel, dfn, em, img, ins, kbd, q, s, samp,\\nsmall, strike, strong, sub, sup, tt, var,\\nb, u, i, center,\\ndl, dt, dd, ol, ul, li,\\nfieldset, form, label, legend,\\ntable, caption, tbody, tfoot, thead, tr, th, td,\\narticle, aside, canvas, details, embed, \\nfigure, figcaption, footer, header, hgroup, \\nmenu, nav, output, ruby, section, summary,\\ntime, mark, audio, video {\\n\\tmargin: 0;\\n\\tpadding: 0;\\n\\tborder: 0;\\n\\tfont-size: 100%;\\n\\tfont: inherit;\\n\\tvertical-align: baseline;\\n}\\n/* HTML5 display-role reset for older browsers */\\narticle, aside, details, figcaption, figure, \\nfooter, header, hgroup, menu, nav, section {\\n\\tdisplay: block;\\n}\\nbody {\\n\\tline-height: 1;\\n}\\nol, ul {\\n\\tlist-style: none;\\n}\\nblockquote, q {\\n\\tquotes: none;\\n}\\nblockquote:before, blockquote:after,\\nq:before, q:after {\\n\\tcontent: '';\\n\\tcontent: none;\\n}\\ntable {\\n\\tborder-collapse: collapse;\\n\\tborder-spacing: 0;\\n}\\n\\n/**\\n * FONTS\\n */\\n\\n@font-face {\\n  font-family: 'Silkscreen Web';\\n  src: url(\" + __webpack_require__(/*! ../../public/fonts/slkscr-webfont.eot */ 1) + \");\\n  src: url(\" + __webpack_require__(/*! ../../public/fonts/slkscr-webfont.eot */ 1) + \"?#iefix) format('embedded-opentype'),\\n    url(\" + __webpack_require__(/*! ../../public/fonts/slkscr-webfont.woff */ 13) + \") format('woff'),\\n    url(\" + __webpack_require__(/*! ../../public/fonts/slkscr-webfont.ttf */ 12) + \") format('truetype'),\\n    url(\" + __webpack_require__(/*! ../../public/fonts/slkscr-webfont.svg */ 11) + \"#silkscreennormal) format('svg');\\n  font-weight: normal;\\n  font-style: normal;\\n}\\n\\n/**\\n * GAME\\n */\\n\\nhtml {\\n  font-size: 16px;\\n}\\n\\nbody {\\n  align-items: center;\\n  display: flex;\\n  font-family: 'Silkscreen Web', monotype;\\n  color: #DCA123;\\n  height: 80vh;\\n  justify-content: center;\\n  width: 100%;\\n  background-color: black;\\n  background-image: url('/../../public/images/supermario.jpg');\\n  background-repeat: no-repeat;\\n  background-position: center;\\n  background-size: 100%;\\n}\\n\\nh1 {\\n  font-size: 2.5rem;\\n  margin-bottom: 1rem; \\n  text-align: center;\\n}\\n\", \"\"]);\n\n// exports\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiOS5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9zdHlsZXMvZ2FtZS5jc3M/NDFlMCJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnRzID0gbW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKFwiLi4vLi4vbm9kZV9tb2R1bGVzL2Nzcy1sb2FkZXIvbGliL2Nzcy1iYXNlLmpzXCIpKCk7XG4vLyBpbXBvcnRzXG5cblxuLy8gbW9kdWxlXG5leHBvcnRzLnB1c2goW21vZHVsZS5pZCwgXCIvKiBodHRwOi8vbWV5ZXJ3ZWIuY29tL2VyaWMvdG9vbHMvY3NzL3Jlc2V0LyBcXG4gICB2Mi4wIHwgMjAxMTAxMjZcXG4gICBMaWNlbnNlOiBub25lIChwdWJsaWMgZG9tYWluKVxcbiovXFxuXFxuaHRtbCwgYm9keSwgZGl2LCBzcGFuLCBhcHBsZXQsIG9iamVjdCwgaWZyYW1lLFxcbmgxLCBoMiwgaDMsIGg0LCBoNSwgaDYsIHAsIGJsb2NrcXVvdGUsIHByZSxcXG5hLCBhYmJyLCBhY3JvbnltLCBhZGRyZXNzLCBiaWcsIGNpdGUsIGNvZGUsXFxuZGVsLCBkZm4sIGVtLCBpbWcsIGlucywga2JkLCBxLCBzLCBzYW1wLFxcbnNtYWxsLCBzdHJpa2UsIHN0cm9uZywgc3ViLCBzdXAsIHR0LCB2YXIsXFxuYiwgdSwgaSwgY2VudGVyLFxcbmRsLCBkdCwgZGQsIG9sLCB1bCwgbGksXFxuZmllbGRzZXQsIGZvcm0sIGxhYmVsLCBsZWdlbmQsXFxudGFibGUsIGNhcHRpb24sIHRib2R5LCB0Zm9vdCwgdGhlYWQsIHRyLCB0aCwgdGQsXFxuYXJ0aWNsZSwgYXNpZGUsIGNhbnZhcywgZGV0YWlscywgZW1iZWQsIFxcbmZpZ3VyZSwgZmlnY2FwdGlvbiwgZm9vdGVyLCBoZWFkZXIsIGhncm91cCwgXFxubWVudSwgbmF2LCBvdXRwdXQsIHJ1YnksIHNlY3Rpb24sIHN1bW1hcnksXFxudGltZSwgbWFyaywgYXVkaW8sIHZpZGVvIHtcXG5cXHRtYXJnaW46IDA7XFxuXFx0cGFkZGluZzogMDtcXG5cXHRib3JkZXI6IDA7XFxuXFx0Zm9udC1zaXplOiAxMDAlO1xcblxcdGZvbnQ6IGluaGVyaXQ7XFxuXFx0dmVydGljYWwtYWxpZ246IGJhc2VsaW5lO1xcbn1cXG4vKiBIVE1MNSBkaXNwbGF5LXJvbGUgcmVzZXQgZm9yIG9sZGVyIGJyb3dzZXJzICovXFxuYXJ0aWNsZSwgYXNpZGUsIGRldGFpbHMsIGZpZ2NhcHRpb24sIGZpZ3VyZSwgXFxuZm9vdGVyLCBoZWFkZXIsIGhncm91cCwgbWVudSwgbmF2LCBzZWN0aW9uIHtcXG5cXHRkaXNwbGF5OiBibG9jaztcXG59XFxuYm9keSB7XFxuXFx0bGluZS1oZWlnaHQ6IDE7XFxufVxcbm9sLCB1bCB7XFxuXFx0bGlzdC1zdHlsZTogbm9uZTtcXG59XFxuYmxvY2txdW90ZSwgcSB7XFxuXFx0cXVvdGVzOiBub25lO1xcbn1cXG5ibG9ja3F1b3RlOmJlZm9yZSwgYmxvY2txdW90ZTphZnRlcixcXG5xOmJlZm9yZSwgcTphZnRlciB7XFxuXFx0Y29udGVudDogJyc7XFxuXFx0Y29udGVudDogbm9uZTtcXG59XFxudGFibGUge1xcblxcdGJvcmRlci1jb2xsYXBzZTogY29sbGFwc2U7XFxuXFx0Ym9yZGVyLXNwYWNpbmc6IDA7XFxufVxcblxcbi8qKlxcbiAqIEZPTlRTXFxuICovXFxuXFxuQGZvbnQtZmFjZSB7XFxuICBmb250LWZhbWlseTogJ1NpbGtzY3JlZW4gV2ViJztcXG4gIHNyYzogdXJsKFwiICsgcmVxdWlyZShcIi4uLy4uL3B1YmxpYy9mb250cy9zbGtzY3Itd2ViZm9udC5lb3RcIikgKyBcIik7XFxuICBzcmM6IHVybChcIiArIHJlcXVpcmUoXCIuLi8uLi9wdWJsaWMvZm9udHMvc2xrc2NyLXdlYmZvbnQuZW90XCIpICsgXCI/I2llZml4KSBmb3JtYXQoJ2VtYmVkZGVkLW9wZW50eXBlJyksXFxuICAgIHVybChcIiArIHJlcXVpcmUoXCIuLi8uLi9wdWJsaWMvZm9udHMvc2xrc2NyLXdlYmZvbnQud29mZlwiKSArIFwiKSBmb3JtYXQoJ3dvZmYnKSxcXG4gICAgdXJsKFwiICsgcmVxdWlyZShcIi4uLy4uL3B1YmxpYy9mb250cy9zbGtzY3Itd2ViZm9udC50dGZcIikgKyBcIikgZm9ybWF0KCd0cnVldHlwZScpLFxcbiAgICB1cmwoXCIgKyByZXF1aXJlKFwiLi4vLi4vcHVibGljL2ZvbnRzL3Nsa3Njci13ZWJmb250LnN2Z1wiKSArIFwiI3NpbGtzY3JlZW5ub3JtYWwpIGZvcm1hdCgnc3ZnJyk7XFxuICBmb250LXdlaWdodDogbm9ybWFsO1xcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xcbn1cXG5cXG4vKipcXG4gKiBHQU1FXFxuICovXFxuXFxuaHRtbCB7XFxuICBmb250LXNpemU6IDE2cHg7XFxufVxcblxcbmJvZHkge1xcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcXG4gIGRpc3BsYXk6IGZsZXg7XFxuICBmb250LWZhbWlseTogJ1NpbGtzY3JlZW4gV2ViJywgbW9ub3R5cGU7XFxuICBjb2xvcjogI0RDQTEyMztcXG4gIGhlaWdodDogODB2aDtcXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xcbiAgd2lkdGg6IDEwMCU7XFxuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLy4uLy4uL3B1YmxpYy9pbWFnZXMvc3VwZXJtYXJpby5qcGcnKTtcXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XFxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XFxuICBiYWNrZ3JvdW5kLXNpemU6IDEwMCU7XFxufVxcblxcbmgxIHtcXG4gIGZvbnQtc2l6ZTogMi41cmVtO1xcbiAgbWFyZ2luLWJvdHRvbTogMXJlbTsgXFxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XFxufVxcblwiLCBcIlwiXSk7XG5cbi8vIGV4cG9ydHNcblxuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vfi9jc3MtbG9hZGVyIS4vc3JjL3N0eWxlcy9nYW1lLmNzc1xuLy8gbW9kdWxlIGlkID0gOVxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///9\n");
 
 /***/ }),
 /* 10 */
+/* no static exports found */
+/* all exports used */
+/*!**************************************!*\
+  !*** ./~/css-loader/lib/css-base.js ***!
+  \**************************************/
 /***/ (function(module, exports) {
 
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function() {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		var result = [];
-		for(var i = 0; i < this.length; i++) {
-			var item = this[i];
-			if(item[2]) {
-				result.push("@media " + item[2] + "{" + item[1] + "}");
-			} else {
-				result.push(item[1]);
-			}
-		}
-		return result.join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
-
+eval("/*\r\n\tMIT License http://www.opensource.org/licenses/mit-license.php\r\n\tAuthor Tobias Koppers @sokra\r\n*/\r\n// css base code, injected by the css-loader\r\nmodule.exports = function() {\r\n\tvar list = [];\r\n\r\n\t// return the list of modules as css string\r\n\tlist.toString = function toString() {\r\n\t\tvar result = [];\r\n\t\tfor(var i = 0; i < this.length; i++) {\r\n\t\t\tvar item = this[i];\r\n\t\t\tif(item[2]) {\r\n\t\t\t\tresult.push(\"@media \" + item[2] + \"{\" + item[1] + \"}\");\r\n\t\t\t} else {\r\n\t\t\t\tresult.push(item[1]);\r\n\t\t\t}\r\n\t\t}\r\n\t\treturn result.join(\"\");\r\n\t};\r\n\r\n\t// import a list of modules into the list\r\n\tlist.i = function(modules, mediaQuery) {\r\n\t\tif(typeof modules === \"string\")\r\n\t\t\tmodules = [[null, modules, \"\"]];\r\n\t\tvar alreadyImportedModules = {};\r\n\t\tfor(var i = 0; i < this.length; i++) {\r\n\t\t\tvar id = this[i][0];\r\n\t\t\tif(typeof id === \"number\")\r\n\t\t\t\talreadyImportedModules[id] = true;\r\n\t\t}\r\n\t\tfor(i = 0; i < modules.length; i++) {\r\n\t\t\tvar item = modules[i];\r\n\t\t\t// skip already imported module\r\n\t\t\t// this implementation is not 100% perfect for weird media query combinations\r\n\t\t\t//  when a module is imported multiple times with different media queries.\r\n\t\t\t//  I hope this will never occur (Hey this way we have smaller bundles)\r\n\t\t\tif(typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\r\n\t\t\t\tif(mediaQuery && !item[2]) {\r\n\t\t\t\t\titem[2] = mediaQuery;\r\n\t\t\t\t} else if(mediaQuery) {\r\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\r\n\t\t\t\t}\r\n\t\t\t\tlist.push(item);\r\n\t\t\t}\r\n\t\t}\r\n\t};\r\n\treturn list;\r\n};\r\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTAuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9+L2Nzcy1sb2FkZXIvbGliL2Nzcy1iYXNlLmpzP2RhMDQiXSwic291cmNlc0NvbnRlbnQiOlsiLypcclxuXHRNSVQgTGljZW5zZSBodHRwOi8vd3d3Lm9wZW5zb3VyY2Uub3JnL2xpY2Vuc2VzL21pdC1saWNlbnNlLnBocFxyXG5cdEF1dGhvciBUb2JpYXMgS29wcGVycyBAc29rcmFcclxuKi9cclxuLy8gY3NzIGJhc2UgY29kZSwgaW5qZWN0ZWQgYnkgdGhlIGNzcy1sb2FkZXJcclxubW9kdWxlLmV4cG9ydHMgPSBmdW5jdGlvbigpIHtcclxuXHR2YXIgbGlzdCA9IFtdO1xyXG5cclxuXHQvLyByZXR1cm4gdGhlIGxpc3Qgb2YgbW9kdWxlcyBhcyBjc3Mgc3RyaW5nXHJcblx0bGlzdC50b1N0cmluZyA9IGZ1bmN0aW9uIHRvU3RyaW5nKCkge1xyXG5cdFx0dmFyIHJlc3VsdCA9IFtdO1xyXG5cdFx0Zm9yKHZhciBpID0gMDsgaSA8IHRoaXMubGVuZ3RoOyBpKyspIHtcclxuXHRcdFx0dmFyIGl0ZW0gPSB0aGlzW2ldO1xyXG5cdFx0XHRpZihpdGVtWzJdKSB7XHJcblx0XHRcdFx0cmVzdWx0LnB1c2goXCJAbWVkaWEgXCIgKyBpdGVtWzJdICsgXCJ7XCIgKyBpdGVtWzFdICsgXCJ9XCIpO1xyXG5cdFx0XHR9IGVsc2Uge1xyXG5cdFx0XHRcdHJlc3VsdC5wdXNoKGl0ZW1bMV0pO1xyXG5cdFx0XHR9XHJcblx0XHR9XHJcblx0XHRyZXR1cm4gcmVzdWx0LmpvaW4oXCJcIik7XHJcblx0fTtcclxuXHJcblx0Ly8gaW1wb3J0IGEgbGlzdCBvZiBtb2R1bGVzIGludG8gdGhlIGxpc3RcclxuXHRsaXN0LmkgPSBmdW5jdGlvbihtb2R1bGVzLCBtZWRpYVF1ZXJ5KSB7XHJcblx0XHRpZih0eXBlb2YgbW9kdWxlcyA9PT0gXCJzdHJpbmdcIilcclxuXHRcdFx0bW9kdWxlcyA9IFtbbnVsbCwgbW9kdWxlcywgXCJcIl1dO1xyXG5cdFx0dmFyIGFscmVhZHlJbXBvcnRlZE1vZHVsZXMgPSB7fTtcclxuXHRcdGZvcih2YXIgaSA9IDA7IGkgPCB0aGlzLmxlbmd0aDsgaSsrKSB7XHJcblx0XHRcdHZhciBpZCA9IHRoaXNbaV1bMF07XHJcblx0XHRcdGlmKHR5cGVvZiBpZCA9PT0gXCJudW1iZXJcIilcclxuXHRcdFx0XHRhbHJlYWR5SW1wb3J0ZWRNb2R1bGVzW2lkXSA9IHRydWU7XHJcblx0XHR9XHJcblx0XHRmb3IoaSA9IDA7IGkgPCBtb2R1bGVzLmxlbmd0aDsgaSsrKSB7XHJcblx0XHRcdHZhciBpdGVtID0gbW9kdWxlc1tpXTtcclxuXHRcdFx0Ly8gc2tpcCBhbHJlYWR5IGltcG9ydGVkIG1vZHVsZVxyXG5cdFx0XHQvLyB0aGlzIGltcGxlbWVudGF0aW9uIGlzIG5vdCAxMDAlIHBlcmZlY3QgZm9yIHdlaXJkIG1lZGlhIHF1ZXJ5IGNvbWJpbmF0aW9uc1xyXG5cdFx0XHQvLyAgd2hlbiBhIG1vZHVsZSBpcyBpbXBvcnRlZCBtdWx0aXBsZSB0aW1lcyB3aXRoIGRpZmZlcmVudCBtZWRpYSBxdWVyaWVzLlxyXG5cdFx0XHQvLyAgSSBob3BlIHRoaXMgd2lsbCBuZXZlciBvY2N1ciAoSGV5IHRoaXMgd2F5IHdlIGhhdmUgc21hbGxlciBidW5kbGVzKVxyXG5cdFx0XHRpZih0eXBlb2YgaXRlbVswXSAhPT0gXCJudW1iZXJcIiB8fCAhYWxyZWFkeUltcG9ydGVkTW9kdWxlc1tpdGVtWzBdXSkge1xyXG5cdFx0XHRcdGlmKG1lZGlhUXVlcnkgJiYgIWl0ZW1bMl0pIHtcclxuXHRcdFx0XHRcdGl0ZW1bMl0gPSBtZWRpYVF1ZXJ5O1xyXG5cdFx0XHRcdH0gZWxzZSBpZihtZWRpYVF1ZXJ5KSB7XHJcblx0XHRcdFx0XHRpdGVtWzJdID0gXCIoXCIgKyBpdGVtWzJdICsgXCIpIGFuZCAoXCIgKyBtZWRpYVF1ZXJ5ICsgXCIpXCI7XHJcblx0XHRcdFx0fVxyXG5cdFx0XHRcdGxpc3QucHVzaChpdGVtKTtcclxuXHRcdFx0fVxyXG5cdFx0fVxyXG5cdH07XHJcblx0cmV0dXJuIGxpc3Q7XHJcbn07XHJcblxuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vfi9jc3MtbG9hZGVyL2xpYi9jc3MtYmFzZS5qc1xuLy8gbW9kdWxlIGlkID0gMTBcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///10\n");
 
 /***/ }),
 /* 11 */
+/* no static exports found */
+/* all exports used */
+/*!*****************************************!*\
+  !*** ./public/fonts/slkscr-webfont.svg ***!
+  \*****************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "public/fonts/slkscr-webfont.svg";
+eval("module.exports = __webpack_require__.p + \"public/fonts/slkscr-webfont.svg\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTEuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wdWJsaWMvZm9udHMvc2xrc2NyLXdlYmZvbnQuc3ZnPzE1NDYiXSwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArIFwicHVibGljL2ZvbnRzL3Nsa3Njci13ZWJmb250LnN2Z1wiO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vcHVibGljL2ZvbnRzL3Nsa3Njci13ZWJmb250LnN2Z1xuLy8gbW9kdWxlIGlkID0gMTFcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///11\n");
 
 /***/ }),
 /* 12 */
+/* no static exports found */
+/* all exports used */
+/*!*****************************************!*\
+  !*** ./public/fonts/slkscr-webfont.ttf ***!
+  \*****************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "public/fonts/slkscr-webfont.ttf";
+eval("module.exports = __webpack_require__.p + \"public/fonts/slkscr-webfont.ttf\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTIuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wdWJsaWMvZm9udHMvc2xrc2NyLXdlYmZvbnQudHRmPzcyY2MiXSwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArIFwicHVibGljL2ZvbnRzL3Nsa3Njci13ZWJmb250LnR0ZlwiO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vcHVibGljL2ZvbnRzL3Nsa3Njci13ZWJmb250LnR0ZlxuLy8gbW9kdWxlIGlkID0gMTJcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///12\n");
 
 /***/ }),
 /* 13 */
+/* no static exports found */
+/* all exports used */
+/*!******************************************!*\
+  !*** ./public/fonts/slkscr-webfont.woff ***!
+  \******************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "public/fonts/slkscr-webfont.woff";
+eval("module.exports = __webpack_require__.p + \"public/fonts/slkscr-webfont.woff\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wdWJsaWMvZm9udHMvc2xrc2NyLXdlYmZvbnQud29mZj8zOWMxIl0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gX193ZWJwYWNrX3B1YmxpY19wYXRoX18gKyBcInB1YmxpYy9mb250cy9zbGtzY3Itd2ViZm9udC53b2ZmXCI7XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9wdWJsaWMvZm9udHMvc2xrc2NyLXdlYmZvbnQud29mZlxuLy8gbW9kdWxlIGlkID0gMTNcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///13\n");
 
 /***/ }),
 /* 14 */
+/* no static exports found */
+/* all exports used */
+/*!*************************************!*\
+  !*** ./~/style-loader/addStyles.js ***!
+  \*************************************/
 /***/ (function(module, exports) {
 
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-var stylesInDom = {},
-	memoize = function(fn) {
-		var memo;
-		return function () {
-			if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-			return memo;
-		};
-	},
-	isOldIE = memoize(function() {
-		return /msie [6-9]\b/.test(self.navigator.userAgent.toLowerCase());
-	}),
-	getHeadElement = memoize(function () {
-		return document.head || document.getElementsByTagName("head")[0];
-	}),
-	singletonElement = null,
-	singletonCounter = 0,
-	styleElementsInsertedAtTop = [];
-
-module.exports = function(list, options) {
-	if(typeof DEBUG !== "undefined" && DEBUG) {
-		if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-	}
-
-	options = options || {};
-	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-	// tags it will allow on a page
-	if (typeof options.singleton === "undefined") options.singleton = isOldIE();
-
-	// By default, add <style> tags to the bottom of <head>.
-	if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
-
-	var styles = listToStyles(list);
-	addStylesToDom(styles, options);
-
-	return function update(newList) {
-		var mayRemove = [];
-		for(var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-			domStyle.refs--;
-			mayRemove.push(domStyle);
-		}
-		if(newList) {
-			var newStyles = listToStyles(newList);
-			addStylesToDom(newStyles, options);
-		}
-		for(var i = 0; i < mayRemove.length; i++) {
-			var domStyle = mayRemove[i];
-			if(domStyle.refs === 0) {
-				for(var j = 0; j < domStyle.parts.length; j++)
-					domStyle.parts[j]();
-				delete stylesInDom[domStyle.id];
-			}
-		}
-	};
-}
-
-function addStylesToDom(styles, options) {
-	for(var i = 0; i < styles.length; i++) {
-		var item = styles[i];
-		var domStyle = stylesInDom[item.id];
-		if(domStyle) {
-			domStyle.refs++;
-			for(var j = 0; j < domStyle.parts.length; j++) {
-				domStyle.parts[j](item.parts[j]);
-			}
-			for(; j < item.parts.length; j++) {
-				domStyle.parts.push(addStyle(item.parts[j], options));
-			}
-		} else {
-			var parts = [];
-			for(var j = 0; j < item.parts.length; j++) {
-				parts.push(addStyle(item.parts[j], options));
-			}
-			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-		}
-	}
-}
-
-function listToStyles(list) {
-	var styles = [];
-	var newStyles = {};
-	for(var i = 0; i < list.length; i++) {
-		var item = list[i];
-		var id = item[0];
-		var css = item[1];
-		var media = item[2];
-		var sourceMap = item[3];
-		var part = {css: css, media: media, sourceMap: sourceMap};
-		if(!newStyles[id])
-			styles.push(newStyles[id] = {id: id, parts: [part]});
-		else
-			newStyles[id].parts.push(part);
-	}
-	return styles;
-}
-
-function insertStyleElement(options, styleElement) {
-	var head = getHeadElement();
-	var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
-	if (options.insertAt === "top") {
-		if(!lastStyleElementInsertedAtTop) {
-			head.insertBefore(styleElement, head.firstChild);
-		} else if(lastStyleElementInsertedAtTop.nextSibling) {
-			head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
-		} else {
-			head.appendChild(styleElement);
-		}
-		styleElementsInsertedAtTop.push(styleElement);
-	} else if (options.insertAt === "bottom") {
-		head.appendChild(styleElement);
-	} else {
-		throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
-	}
-}
-
-function removeStyleElement(styleElement) {
-	styleElement.parentNode.removeChild(styleElement);
-	var idx = styleElementsInsertedAtTop.indexOf(styleElement);
-	if(idx >= 0) {
-		styleElementsInsertedAtTop.splice(idx, 1);
-	}
-}
-
-function createStyleElement(options) {
-	var styleElement = document.createElement("style");
-	styleElement.type = "text/css";
-	insertStyleElement(options, styleElement);
-	return styleElement;
-}
-
-function createLinkElement(options) {
-	var linkElement = document.createElement("link");
-	linkElement.rel = "stylesheet";
-	insertStyleElement(options, linkElement);
-	return linkElement;
-}
-
-function addStyle(obj, options) {
-	var styleElement, update, remove;
-
-	if (options.singleton) {
-		var styleIndex = singletonCounter++;
-		styleElement = singletonElement || (singletonElement = createStyleElement(options));
-		update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
-		remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
-	} else if(obj.sourceMap &&
-		typeof URL === "function" &&
-		typeof URL.createObjectURL === "function" &&
-		typeof URL.revokeObjectURL === "function" &&
-		typeof Blob === "function" &&
-		typeof btoa === "function") {
-		styleElement = createLinkElement(options);
-		update = updateLink.bind(null, styleElement);
-		remove = function() {
-			removeStyleElement(styleElement);
-			if(styleElement.href)
-				URL.revokeObjectURL(styleElement.href);
-		};
-	} else {
-		styleElement = createStyleElement(options);
-		update = applyToTag.bind(null, styleElement);
-		remove = function() {
-			removeStyleElement(styleElement);
-		};
-	}
-
-	update(obj);
-
-	return function updateStyle(newObj) {
-		if(newObj) {
-			if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
-				return;
-			update(obj = newObj);
-		} else {
-			remove();
-		}
-	};
-}
-
-var replaceText = (function () {
-	var textStore = [];
-
-	return function (index, replacement) {
-		textStore[index] = replacement;
-		return textStore.filter(Boolean).join('\n');
-	};
-})();
-
-function applyToSingletonTag(styleElement, index, remove, obj) {
-	var css = remove ? "" : obj.css;
-
-	if (styleElement.styleSheet) {
-		styleElement.styleSheet.cssText = replaceText(index, css);
-	} else {
-		var cssNode = document.createTextNode(css);
-		var childNodes = styleElement.childNodes;
-		if (childNodes[index]) styleElement.removeChild(childNodes[index]);
-		if (childNodes.length) {
-			styleElement.insertBefore(cssNode, childNodes[index]);
-		} else {
-			styleElement.appendChild(cssNode);
-		}
-	}
-}
-
-function applyToTag(styleElement, obj) {
-	var css = obj.css;
-	var media = obj.media;
-
-	if(media) {
-		styleElement.setAttribute("media", media)
-	}
-
-	if(styleElement.styleSheet) {
-		styleElement.styleSheet.cssText = css;
-	} else {
-		while(styleElement.firstChild) {
-			styleElement.removeChild(styleElement.firstChild);
-		}
-		styleElement.appendChild(document.createTextNode(css));
-	}
-}
-
-function updateLink(linkElement, obj) {
-	var css = obj.css;
-	var sourceMap = obj.sourceMap;
-
-	if(sourceMap) {
-		// http://stackoverflow.com/a/26603875
-		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-	}
-
-	var blob = new Blob([css], { type: "text/css" });
-
-	var oldSrc = linkElement.href;
-
-	linkElement.href = URL.createObjectURL(blob);
-
-	if(oldSrc)
-		URL.revokeObjectURL(oldSrc);
-}
-
+eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\nvar stylesInDom = {},\n\tmemoize = function(fn) {\n\t\tvar memo;\n\t\treturn function () {\n\t\t\tif (typeof memo === \"undefined\") memo = fn.apply(this, arguments);\n\t\t\treturn memo;\n\t\t};\n\t},\n\tisOldIE = memoize(function() {\n\t\treturn /msie [6-9]\\b/.test(self.navigator.userAgent.toLowerCase());\n\t}),\n\tgetHeadElement = memoize(function () {\n\t\treturn document.head || document.getElementsByTagName(\"head\")[0];\n\t}),\n\tsingletonElement = null,\n\tsingletonCounter = 0,\n\tstyleElementsInsertedAtTop = [];\n\nmodule.exports = function(list, options) {\n\tif(typeof DEBUG !== \"undefined\" && DEBUG) {\n\t\tif(typeof document !== \"object\") throw new Error(\"The style-loader cannot be used in a non-browser environment\");\n\t}\n\n\toptions = options || {};\n\t// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>\n\t// tags it will allow on a page\n\tif (typeof options.singleton === \"undefined\") options.singleton = isOldIE();\n\n\t// By default, add <style> tags to the bottom of <head>.\n\tif (typeof options.insertAt === \"undefined\") options.insertAt = \"bottom\";\n\n\tvar styles = listToStyles(list);\n\taddStylesToDom(styles, options);\n\n\treturn function update(newList) {\n\t\tvar mayRemove = [];\n\t\tfor(var i = 0; i < styles.length; i++) {\n\t\t\tvar item = styles[i];\n\t\t\tvar domStyle = stylesInDom[item.id];\n\t\t\tdomStyle.refs--;\n\t\t\tmayRemove.push(domStyle);\n\t\t}\n\t\tif(newList) {\n\t\t\tvar newStyles = listToStyles(newList);\n\t\t\taddStylesToDom(newStyles, options);\n\t\t}\n\t\tfor(var i = 0; i < mayRemove.length; i++) {\n\t\t\tvar domStyle = mayRemove[i];\n\t\t\tif(domStyle.refs === 0) {\n\t\t\t\tfor(var j = 0; j < domStyle.parts.length; j++)\n\t\t\t\t\tdomStyle.parts[j]();\n\t\t\t\tdelete stylesInDom[domStyle.id];\n\t\t\t}\n\t\t}\n\t};\n}\n\nfunction addStylesToDom(styles, options) {\n\tfor(var i = 0; i < styles.length; i++) {\n\t\tvar item = styles[i];\n\t\tvar domStyle = stylesInDom[item.id];\n\t\tif(domStyle) {\n\t\t\tdomStyle.refs++;\n\t\t\tfor(var j = 0; j < domStyle.parts.length; j++) {\n\t\t\t\tdomStyle.parts[j](item.parts[j]);\n\t\t\t}\n\t\t\tfor(; j < item.parts.length; j++) {\n\t\t\t\tdomStyle.parts.push(addStyle(item.parts[j], options));\n\t\t\t}\n\t\t} else {\n\t\t\tvar parts = [];\n\t\t\tfor(var j = 0; j < item.parts.length; j++) {\n\t\t\t\tparts.push(addStyle(item.parts[j], options));\n\t\t\t}\n\t\t\tstylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};\n\t\t}\n\t}\n}\n\nfunction listToStyles(list) {\n\tvar styles = [];\n\tvar newStyles = {};\n\tfor(var i = 0; i < list.length; i++) {\n\t\tvar item = list[i];\n\t\tvar id = item[0];\n\t\tvar css = item[1];\n\t\tvar media = item[2];\n\t\tvar sourceMap = item[3];\n\t\tvar part = {css: css, media: media, sourceMap: sourceMap};\n\t\tif(!newStyles[id])\n\t\t\tstyles.push(newStyles[id] = {id: id, parts: [part]});\n\t\telse\n\t\t\tnewStyles[id].parts.push(part);\n\t}\n\treturn styles;\n}\n\nfunction insertStyleElement(options, styleElement) {\n\tvar head = getHeadElement();\n\tvar lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];\n\tif (options.insertAt === \"top\") {\n\t\tif(!lastStyleElementInsertedAtTop) {\n\t\t\thead.insertBefore(styleElement, head.firstChild);\n\t\t} else if(lastStyleElementInsertedAtTop.nextSibling) {\n\t\t\thead.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);\n\t\t} else {\n\t\t\thead.appendChild(styleElement);\n\t\t}\n\t\tstyleElementsInsertedAtTop.push(styleElement);\n\t} else if (options.insertAt === \"bottom\") {\n\t\thead.appendChild(styleElement);\n\t} else {\n\t\tthrow new Error(\"Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.\");\n\t}\n}\n\nfunction removeStyleElement(styleElement) {\n\tstyleElement.parentNode.removeChild(styleElement);\n\tvar idx = styleElementsInsertedAtTop.indexOf(styleElement);\n\tif(idx >= 0) {\n\t\tstyleElementsInsertedAtTop.splice(idx, 1);\n\t}\n}\n\nfunction createStyleElement(options) {\n\tvar styleElement = document.createElement(\"style\");\n\tstyleElement.type = \"text/css\";\n\tinsertStyleElement(options, styleElement);\n\treturn styleElement;\n}\n\nfunction createLinkElement(options) {\n\tvar linkElement = document.createElement(\"link\");\n\tlinkElement.rel = \"stylesheet\";\n\tinsertStyleElement(options, linkElement);\n\treturn linkElement;\n}\n\nfunction addStyle(obj, options) {\n\tvar styleElement, update, remove;\n\n\tif (options.singleton) {\n\t\tvar styleIndex = singletonCounter++;\n\t\tstyleElement = singletonElement || (singletonElement = createStyleElement(options));\n\t\tupdate = applyToSingletonTag.bind(null, styleElement, styleIndex, false);\n\t\tremove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);\n\t} else if(obj.sourceMap &&\n\t\ttypeof URL === \"function\" &&\n\t\ttypeof URL.createObjectURL === \"function\" &&\n\t\ttypeof URL.revokeObjectURL === \"function\" &&\n\t\ttypeof Blob === \"function\" &&\n\t\ttypeof btoa === \"function\") {\n\t\tstyleElement = createLinkElement(options);\n\t\tupdate = updateLink.bind(null, styleElement);\n\t\tremove = function() {\n\t\t\tremoveStyleElement(styleElement);\n\t\t\tif(styleElement.href)\n\t\t\t\tURL.revokeObjectURL(styleElement.href);\n\t\t};\n\t} else {\n\t\tstyleElement = createStyleElement(options);\n\t\tupdate = applyToTag.bind(null, styleElement);\n\t\tremove = function() {\n\t\t\tremoveStyleElement(styleElement);\n\t\t};\n\t}\n\n\tupdate(obj);\n\n\treturn function updateStyle(newObj) {\n\t\tif(newObj) {\n\t\t\tif(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)\n\t\t\t\treturn;\n\t\t\tupdate(obj = newObj);\n\t\t} else {\n\t\t\tremove();\n\t\t}\n\t};\n}\n\nvar replaceText = (function () {\n\tvar textStore = [];\n\n\treturn function (index, replacement) {\n\t\ttextStore[index] = replacement;\n\t\treturn textStore.filter(Boolean).join('\\n');\n\t};\n})();\n\nfunction applyToSingletonTag(styleElement, index, remove, obj) {\n\tvar css = remove ? \"\" : obj.css;\n\n\tif (styleElement.styleSheet) {\n\t\tstyleElement.styleSheet.cssText = replaceText(index, css);\n\t} else {\n\t\tvar cssNode = document.createTextNode(css);\n\t\tvar childNodes = styleElement.childNodes;\n\t\tif (childNodes[index]) styleElement.removeChild(childNodes[index]);\n\t\tif (childNodes.length) {\n\t\t\tstyleElement.insertBefore(cssNode, childNodes[index]);\n\t\t} else {\n\t\t\tstyleElement.appendChild(cssNode);\n\t\t}\n\t}\n}\n\nfunction applyToTag(styleElement, obj) {\n\tvar css = obj.css;\n\tvar media = obj.media;\n\n\tif(media) {\n\t\tstyleElement.setAttribute(\"media\", media)\n\t}\n\n\tif(styleElement.styleSheet) {\n\t\tstyleElement.styleSheet.cssText = css;\n\t} else {\n\t\twhile(styleElement.firstChild) {\n\t\t\tstyleElement.removeChild(styleElement.firstChild);\n\t\t}\n\t\tstyleElement.appendChild(document.createTextNode(css));\n\t}\n}\n\nfunction updateLink(linkElement, obj) {\n\tvar css = obj.css;\n\tvar sourceMap = obj.sourceMap;\n\n\tif(sourceMap) {\n\t\t// http://stackoverflow.com/a/26603875\n\t\tcss += \"\\n/*# sourceMappingURL=data:application/json;base64,\" + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + \" */\";\n\t}\n\n\tvar blob = new Blob([css], { type: \"text/css\" });\n\n\tvar oldSrc = linkElement.href;\n\n\tlinkElement.href = URL.createObjectURL(blob);\n\n\tif(oldSrc)\n\t\tURL.revokeObjectURL(oldSrc);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTQuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9+L3N0eWxlLWxvYWRlci9hZGRTdHlsZXMuanM/Yjk4MCJdLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuXHRNSVQgTGljZW5zZSBodHRwOi8vd3d3Lm9wZW5zb3VyY2Uub3JnL2xpY2Vuc2VzL21pdC1saWNlbnNlLnBocFxuXHRBdXRob3IgVG9iaWFzIEtvcHBlcnMgQHNva3JhXG4qL1xudmFyIHN0eWxlc0luRG9tID0ge30sXG5cdG1lbW9pemUgPSBmdW5jdGlvbihmbikge1xuXHRcdHZhciBtZW1vO1xuXHRcdHJldHVybiBmdW5jdGlvbiAoKSB7XG5cdFx0XHRpZiAodHlwZW9mIG1lbW8gPT09IFwidW5kZWZpbmVkXCIpIG1lbW8gPSBmbi5hcHBseSh0aGlzLCBhcmd1bWVudHMpO1xuXHRcdFx0cmV0dXJuIG1lbW87XG5cdFx0fTtcblx0fSxcblx0aXNPbGRJRSA9IG1lbW9pemUoZnVuY3Rpb24oKSB7XG5cdFx0cmV0dXJuIC9tc2llIFs2LTldXFxiLy50ZXN0KHNlbGYubmF2aWdhdG9yLnVzZXJBZ2VudC50b0xvd2VyQ2FzZSgpKTtcblx0fSksXG5cdGdldEhlYWRFbGVtZW50ID0gbWVtb2l6ZShmdW5jdGlvbiAoKSB7XG5cdFx0cmV0dXJuIGRvY3VtZW50LmhlYWQgfHwgZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoXCJoZWFkXCIpWzBdO1xuXHR9KSxcblx0c2luZ2xldG9uRWxlbWVudCA9IG51bGwsXG5cdHNpbmdsZXRvbkNvdW50ZXIgPSAwLFxuXHRzdHlsZUVsZW1lbnRzSW5zZXJ0ZWRBdFRvcCA9IFtdO1xuXG5tb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uKGxpc3QsIG9wdGlvbnMpIHtcblx0aWYodHlwZW9mIERFQlVHICE9PSBcInVuZGVmaW5lZFwiICYmIERFQlVHKSB7XG5cdFx0aWYodHlwZW9mIGRvY3VtZW50ICE9PSBcIm9iamVjdFwiKSB0aHJvdyBuZXcgRXJyb3IoXCJUaGUgc3R5bGUtbG9hZGVyIGNhbm5vdCBiZSB1c2VkIGluIGEgbm9uLWJyb3dzZXIgZW52aXJvbm1lbnRcIik7XG5cdH1cblxuXHRvcHRpb25zID0gb3B0aW9ucyB8fCB7fTtcblx0Ly8gRm9yY2Ugc2luZ2xlLXRhZyBzb2x1dGlvbiBvbiBJRTYtOSwgd2hpY2ggaGFzIGEgaGFyZCBsaW1pdCBvbiB0aGUgIyBvZiA8c3R5bGU+XG5cdC8vIHRhZ3MgaXQgd2lsbCBhbGxvdyBvbiBhIHBhZ2Vcblx0aWYgKHR5cGVvZiBvcHRpb25zLnNpbmdsZXRvbiA9PT0gXCJ1bmRlZmluZWRcIikgb3B0aW9ucy5zaW5nbGV0b24gPSBpc09sZElFKCk7XG5cblx0Ly8gQnkgZGVmYXVsdCwgYWRkIDxzdHlsZT4gdGFncyB0byB0aGUgYm90dG9tIG9mIDxoZWFkPi5cblx0aWYgKHR5cGVvZiBvcHRpb25zLmluc2VydEF0ID09PSBcInVuZGVmaW5lZFwiKSBvcHRpb25zLmluc2VydEF0ID0gXCJib3R0b21cIjtcblxuXHR2YXIgc3R5bGVzID0gbGlzdFRvU3R5bGVzKGxpc3QpO1xuXHRhZGRTdHlsZXNUb0RvbShzdHlsZXMsIG9wdGlvbnMpO1xuXG5cdHJldHVybiBmdW5jdGlvbiB1cGRhdGUobmV3TGlzdCkge1xuXHRcdHZhciBtYXlSZW1vdmUgPSBbXTtcblx0XHRmb3IodmFyIGkgPSAwOyBpIDwgc3R5bGVzLmxlbmd0aDsgaSsrKSB7XG5cdFx0XHR2YXIgaXRlbSA9IHN0eWxlc1tpXTtcblx0XHRcdHZhciBkb21TdHlsZSA9IHN0eWxlc0luRG9tW2l0ZW0uaWRdO1xuXHRcdFx0ZG9tU3R5bGUucmVmcy0tO1xuXHRcdFx0bWF5UmVtb3ZlLnB1c2goZG9tU3R5bGUpO1xuXHRcdH1cblx0XHRpZihuZXdMaXN0KSB7XG5cdFx0XHR2YXIgbmV3U3R5bGVzID0gbGlzdFRvU3R5bGVzKG5ld0xpc3QpO1xuXHRcdFx0YWRkU3R5bGVzVG9Eb20obmV3U3R5bGVzLCBvcHRpb25zKTtcblx0XHR9XG5cdFx0Zm9yKHZhciBpID0gMDsgaSA8IG1heVJlbW92ZS5sZW5ndGg7IGkrKykge1xuXHRcdFx0dmFyIGRvbVN0eWxlID0gbWF5UmVtb3ZlW2ldO1xuXHRcdFx0aWYoZG9tU3R5bGUucmVmcyA9PT0gMCkge1xuXHRcdFx0XHRmb3IodmFyIGogPSAwOyBqIDwgZG9tU3R5bGUucGFydHMubGVuZ3RoOyBqKyspXG5cdFx0XHRcdFx0ZG9tU3R5bGUucGFydHNbal0oKTtcblx0XHRcdFx0ZGVsZXRlIHN0eWxlc0luRG9tW2RvbVN0eWxlLmlkXTtcblx0XHRcdH1cblx0XHR9XG5cdH07XG59XG5cbmZ1bmN0aW9uIGFkZFN0eWxlc1RvRG9tKHN0eWxlcywgb3B0aW9ucykge1xuXHRmb3IodmFyIGkgPSAwOyBpIDwgc3R5bGVzLmxlbmd0aDsgaSsrKSB7XG5cdFx0dmFyIGl0ZW0gPSBzdHlsZXNbaV07XG5cdFx0dmFyIGRvbVN0eWxlID0gc3R5bGVzSW5Eb21baXRlbS5pZF07XG5cdFx0aWYoZG9tU3R5bGUpIHtcblx0XHRcdGRvbVN0eWxlLnJlZnMrKztcblx0XHRcdGZvcih2YXIgaiA9IDA7IGogPCBkb21TdHlsZS5wYXJ0cy5sZW5ndGg7IGorKykge1xuXHRcdFx0XHRkb21TdHlsZS5wYXJ0c1tqXShpdGVtLnBhcnRzW2pdKTtcblx0XHRcdH1cblx0XHRcdGZvcig7IGogPCBpdGVtLnBhcnRzLmxlbmd0aDsgaisrKSB7XG5cdFx0XHRcdGRvbVN0eWxlLnBhcnRzLnB1c2goYWRkU3R5bGUoaXRlbS5wYXJ0c1tqXSwgb3B0aW9ucykpO1xuXHRcdFx0fVxuXHRcdH0gZWxzZSB7XG5cdFx0XHR2YXIgcGFydHMgPSBbXTtcblx0XHRcdGZvcih2YXIgaiA9IDA7IGogPCBpdGVtLnBhcnRzLmxlbmd0aDsgaisrKSB7XG5cdFx0XHRcdHBhcnRzLnB1c2goYWRkU3R5bGUoaXRlbS5wYXJ0c1tqXSwgb3B0aW9ucykpO1xuXHRcdFx0fVxuXHRcdFx0c3R5bGVzSW5Eb21baXRlbS5pZF0gPSB7aWQ6IGl0ZW0uaWQsIHJlZnM6IDEsIHBhcnRzOiBwYXJ0c307XG5cdFx0fVxuXHR9XG59XG5cbmZ1bmN0aW9uIGxpc3RUb1N0eWxlcyhsaXN0KSB7XG5cdHZhciBzdHlsZXMgPSBbXTtcblx0dmFyIG5ld1N0eWxlcyA9IHt9O1xuXHRmb3IodmFyIGkgPSAwOyBpIDwgbGlzdC5sZW5ndGg7IGkrKykge1xuXHRcdHZhciBpdGVtID0gbGlzdFtpXTtcblx0XHR2YXIgaWQgPSBpdGVtWzBdO1xuXHRcdHZhciBjc3MgPSBpdGVtWzFdO1xuXHRcdHZhciBtZWRpYSA9IGl0ZW1bMl07XG5cdFx0dmFyIHNvdXJjZU1hcCA9IGl0ZW1bM107XG5cdFx0dmFyIHBhcnQgPSB7Y3NzOiBjc3MsIG1lZGlhOiBtZWRpYSwgc291cmNlTWFwOiBzb3VyY2VNYXB9O1xuXHRcdGlmKCFuZXdTdHlsZXNbaWRdKVxuXHRcdFx0c3R5bGVzLnB1c2gobmV3U3R5bGVzW2lkXSA9IHtpZDogaWQsIHBhcnRzOiBbcGFydF19KTtcblx0XHRlbHNlXG5cdFx0XHRuZXdTdHlsZXNbaWRdLnBhcnRzLnB1c2gocGFydCk7XG5cdH1cblx0cmV0dXJuIHN0eWxlcztcbn1cblxuZnVuY3Rpb24gaW5zZXJ0U3R5bGVFbGVtZW50KG9wdGlvbnMsIHN0eWxlRWxlbWVudCkge1xuXHR2YXIgaGVhZCA9IGdldEhlYWRFbGVtZW50KCk7XG5cdHZhciBsYXN0U3R5bGVFbGVtZW50SW5zZXJ0ZWRBdFRvcCA9IHN0eWxlRWxlbWVudHNJbnNlcnRlZEF0VG9wW3N0eWxlRWxlbWVudHNJbnNlcnRlZEF0VG9wLmxlbmd0aCAtIDFdO1xuXHRpZiAob3B0aW9ucy5pbnNlcnRBdCA9PT0gXCJ0b3BcIikge1xuXHRcdGlmKCFsYXN0U3R5bGVFbGVtZW50SW5zZXJ0ZWRBdFRvcCkge1xuXHRcdFx0aGVhZC5pbnNlcnRCZWZvcmUoc3R5bGVFbGVtZW50LCBoZWFkLmZpcnN0Q2hpbGQpO1xuXHRcdH0gZWxzZSBpZihsYXN0U3R5bGVFbGVtZW50SW5zZXJ0ZWRBdFRvcC5uZXh0U2libGluZykge1xuXHRcdFx0aGVhZC5pbnNlcnRCZWZvcmUoc3R5bGVFbGVtZW50LCBsYXN0U3R5bGVFbGVtZW50SW5zZXJ0ZWRBdFRvcC5uZXh0U2libGluZyk7XG5cdFx0fSBlbHNlIHtcblx0XHRcdGhlYWQuYXBwZW5kQ2hpbGQoc3R5bGVFbGVtZW50KTtcblx0XHR9XG5cdFx0c3R5bGVFbGVtZW50c0luc2VydGVkQXRUb3AucHVzaChzdHlsZUVsZW1lbnQpO1xuXHR9IGVsc2UgaWYgKG9wdGlvbnMuaW5zZXJ0QXQgPT09IFwiYm90dG9tXCIpIHtcblx0XHRoZWFkLmFwcGVuZENoaWxkKHN0eWxlRWxlbWVudCk7XG5cdH0gZWxzZSB7XG5cdFx0dGhyb3cgbmV3IEVycm9yKFwiSW52YWxpZCB2YWx1ZSBmb3IgcGFyYW1ldGVyICdpbnNlcnRBdCcuIE11c3QgYmUgJ3RvcCcgb3IgJ2JvdHRvbScuXCIpO1xuXHR9XG59XG5cbmZ1bmN0aW9uIHJlbW92ZVN0eWxlRWxlbWVudChzdHlsZUVsZW1lbnQpIHtcblx0c3R5bGVFbGVtZW50LnBhcmVudE5vZGUucmVtb3ZlQ2hpbGQoc3R5bGVFbGVtZW50KTtcblx0dmFyIGlkeCA9IHN0eWxlRWxlbWVudHNJbnNlcnRlZEF0VG9wLmluZGV4T2Yoc3R5bGVFbGVtZW50KTtcblx0aWYoaWR4ID49IDApIHtcblx0XHRzdHlsZUVsZW1lbnRzSW5zZXJ0ZWRBdFRvcC5zcGxpY2UoaWR4LCAxKTtcblx0fVxufVxuXG5mdW5jdGlvbiBjcmVhdGVTdHlsZUVsZW1lbnQob3B0aW9ucykge1xuXHR2YXIgc3R5bGVFbGVtZW50ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudChcInN0eWxlXCIpO1xuXHRzdHlsZUVsZW1lbnQudHlwZSA9IFwidGV4dC9jc3NcIjtcblx0aW5zZXJ0U3R5bGVFbGVtZW50KG9wdGlvbnMsIHN0eWxlRWxlbWVudCk7XG5cdHJldHVybiBzdHlsZUVsZW1lbnQ7XG59XG5cbmZ1bmN0aW9uIGNyZWF0ZUxpbmtFbGVtZW50KG9wdGlvbnMpIHtcblx0dmFyIGxpbmtFbGVtZW50ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudChcImxpbmtcIik7XG5cdGxpbmtFbGVtZW50LnJlbCA9IFwic3R5bGVzaGVldFwiO1xuXHRpbnNlcnRTdHlsZUVsZW1lbnQob3B0aW9ucywgbGlua0VsZW1lbnQpO1xuXHRyZXR1cm4gbGlua0VsZW1lbnQ7XG59XG5cbmZ1bmN0aW9uIGFkZFN0eWxlKG9iaiwgb3B0aW9ucykge1xuXHR2YXIgc3R5bGVFbGVtZW50LCB1cGRhdGUsIHJlbW92ZTtcblxuXHRpZiAob3B0aW9ucy5zaW5nbGV0b24pIHtcblx0XHR2YXIgc3R5bGVJbmRleCA9IHNpbmdsZXRvbkNvdW50ZXIrKztcblx0XHRzdHlsZUVsZW1lbnQgPSBzaW5nbGV0b25FbGVtZW50IHx8IChzaW5nbGV0b25FbGVtZW50ID0gY3JlYXRlU3R5bGVFbGVtZW50KG9wdGlvbnMpKTtcblx0XHR1cGRhdGUgPSBhcHBseVRvU2luZ2xldG9uVGFnLmJpbmQobnVsbCwgc3R5bGVFbGVtZW50LCBzdHlsZUluZGV4LCBmYWxzZSk7XG5cdFx0cmVtb3ZlID0gYXBwbHlUb1NpbmdsZXRvblRhZy5iaW5kKG51bGwsIHN0eWxlRWxlbWVudCwgc3R5bGVJbmRleCwgdHJ1ZSk7XG5cdH0gZWxzZSBpZihvYmouc291cmNlTWFwICYmXG5cdFx0dHlwZW9mIFVSTCA9PT0gXCJmdW5jdGlvblwiICYmXG5cdFx0dHlwZW9mIFVSTC5jcmVhdGVPYmplY3RVUkwgPT09IFwiZnVuY3Rpb25cIiAmJlxuXHRcdHR5cGVvZiBVUkwucmV2b2tlT2JqZWN0VVJMID09PSBcImZ1bmN0aW9uXCIgJiZcblx0XHR0eXBlb2YgQmxvYiA9PT0gXCJmdW5jdGlvblwiICYmXG5cdFx0dHlwZW9mIGJ0b2EgPT09IFwiZnVuY3Rpb25cIikge1xuXHRcdHN0eWxlRWxlbWVudCA9IGNyZWF0ZUxpbmtFbGVtZW50KG9wdGlvbnMpO1xuXHRcdHVwZGF0ZSA9IHVwZGF0ZUxpbmsuYmluZChudWxsLCBzdHlsZUVsZW1lbnQpO1xuXHRcdHJlbW92ZSA9IGZ1bmN0aW9uKCkge1xuXHRcdFx0cmVtb3ZlU3R5bGVFbGVtZW50KHN0eWxlRWxlbWVudCk7XG5cdFx0XHRpZihzdHlsZUVsZW1lbnQuaHJlZilcblx0XHRcdFx0VVJMLnJldm9rZU9iamVjdFVSTChzdHlsZUVsZW1lbnQuaHJlZik7XG5cdFx0fTtcblx0fSBlbHNlIHtcblx0XHRzdHlsZUVsZW1lbnQgPSBjcmVhdGVTdHlsZUVsZW1lbnQob3B0aW9ucyk7XG5cdFx0dXBkYXRlID0gYXBwbHlUb1RhZy5iaW5kKG51bGwsIHN0eWxlRWxlbWVudCk7XG5cdFx0cmVtb3ZlID0gZnVuY3Rpb24oKSB7XG5cdFx0XHRyZW1vdmVTdHlsZUVsZW1lbnQoc3R5bGVFbGVtZW50KTtcblx0XHR9O1xuXHR9XG5cblx0dXBkYXRlKG9iaik7XG5cblx0cmV0dXJuIGZ1bmN0aW9uIHVwZGF0ZVN0eWxlKG5ld09iaikge1xuXHRcdGlmKG5ld09iaikge1xuXHRcdFx0aWYobmV3T2JqLmNzcyA9PT0gb2JqLmNzcyAmJiBuZXdPYmoubWVkaWEgPT09IG9iai5tZWRpYSAmJiBuZXdPYmouc291cmNlTWFwID09PSBvYmouc291cmNlTWFwKVxuXHRcdFx0XHRyZXR1cm47XG5cdFx0XHR1cGRhdGUob2JqID0gbmV3T2JqKTtcblx0XHR9IGVsc2Uge1xuXHRcdFx0cmVtb3ZlKCk7XG5cdFx0fVxuXHR9O1xufVxuXG52YXIgcmVwbGFjZVRleHQgPSAoZnVuY3Rpb24gKCkge1xuXHR2YXIgdGV4dFN0b3JlID0gW107XG5cblx0cmV0dXJuIGZ1bmN0aW9uIChpbmRleCwgcmVwbGFjZW1lbnQpIHtcblx0XHR0ZXh0U3RvcmVbaW5kZXhdID0gcmVwbGFjZW1lbnQ7XG5cdFx0cmV0dXJuIHRleHRTdG9yZS5maWx0ZXIoQm9vbGVhbikuam9pbignXFxuJyk7XG5cdH07XG59KSgpO1xuXG5mdW5jdGlvbiBhcHBseVRvU2luZ2xldG9uVGFnKHN0eWxlRWxlbWVudCwgaW5kZXgsIHJlbW92ZSwgb2JqKSB7XG5cdHZhciBjc3MgPSByZW1vdmUgPyBcIlwiIDogb2JqLmNzcztcblxuXHRpZiAoc3R5bGVFbGVtZW50LnN0eWxlU2hlZXQpIHtcblx0XHRzdHlsZUVsZW1lbnQuc3R5bGVTaGVldC5jc3NUZXh0ID0gcmVwbGFjZVRleHQoaW5kZXgsIGNzcyk7XG5cdH0gZWxzZSB7XG5cdFx0dmFyIGNzc05vZGUgPSBkb2N1bWVudC5jcmVhdGVUZXh0Tm9kZShjc3MpO1xuXHRcdHZhciBjaGlsZE5vZGVzID0gc3R5bGVFbGVtZW50LmNoaWxkTm9kZXM7XG5cdFx0aWYgKGNoaWxkTm9kZXNbaW5kZXhdKSBzdHlsZUVsZW1lbnQucmVtb3ZlQ2hpbGQoY2hpbGROb2Rlc1tpbmRleF0pO1xuXHRcdGlmIChjaGlsZE5vZGVzLmxlbmd0aCkge1xuXHRcdFx0c3R5bGVFbGVtZW50Lmluc2VydEJlZm9yZShjc3NOb2RlLCBjaGlsZE5vZGVzW2luZGV4XSk7XG5cdFx0fSBlbHNlIHtcblx0XHRcdHN0eWxlRWxlbWVudC5hcHBlbmRDaGlsZChjc3NOb2RlKTtcblx0XHR9XG5cdH1cbn1cblxuZnVuY3Rpb24gYXBwbHlUb1RhZyhzdHlsZUVsZW1lbnQsIG9iaikge1xuXHR2YXIgY3NzID0gb2JqLmNzcztcblx0dmFyIG1lZGlhID0gb2JqLm1lZGlhO1xuXG5cdGlmKG1lZGlhKSB7XG5cdFx0c3R5bGVFbGVtZW50LnNldEF0dHJpYnV0ZShcIm1lZGlhXCIsIG1lZGlhKVxuXHR9XG5cblx0aWYoc3R5bGVFbGVtZW50LnN0eWxlU2hlZXQpIHtcblx0XHRzdHlsZUVsZW1lbnQuc3R5bGVTaGVldC5jc3NUZXh0ID0gY3NzO1xuXHR9IGVsc2Uge1xuXHRcdHdoaWxlKHN0eWxlRWxlbWVudC5maXJzdENoaWxkKSB7XG5cdFx0XHRzdHlsZUVsZW1lbnQucmVtb3ZlQ2hpbGQoc3R5bGVFbGVtZW50LmZpcnN0Q2hpbGQpO1xuXHRcdH1cblx0XHRzdHlsZUVsZW1lbnQuYXBwZW5kQ2hpbGQoZG9jdW1lbnQuY3JlYXRlVGV4dE5vZGUoY3NzKSk7XG5cdH1cbn1cblxuZnVuY3Rpb24gdXBkYXRlTGluayhsaW5rRWxlbWVudCwgb2JqKSB7XG5cdHZhciBjc3MgPSBvYmouY3NzO1xuXHR2YXIgc291cmNlTWFwID0gb2JqLnNvdXJjZU1hcDtcblxuXHRpZihzb3VyY2VNYXApIHtcblx0XHQvLyBodHRwOi8vc3RhY2tvdmVyZmxvdy5jb20vYS8yNjYwMzg3NVxuXHRcdGNzcyArPSBcIlxcbi8qIyBzb3VyY2VNYXBwaW5nVVJMPWRhdGE6YXBwbGljYXRpb24vanNvbjtiYXNlNjQsXCIgKyBidG9hKHVuZXNjYXBlKGVuY29kZVVSSUNvbXBvbmVudChKU09OLnN0cmluZ2lmeShzb3VyY2VNYXApKSkpICsgXCIgKi9cIjtcblx0fVxuXG5cdHZhciBibG9iID0gbmV3IEJsb2IoW2Nzc10sIHsgdHlwZTogXCJ0ZXh0L2Nzc1wiIH0pO1xuXG5cdHZhciBvbGRTcmMgPSBsaW5rRWxlbWVudC5ocmVmO1xuXG5cdGxpbmtFbGVtZW50LmhyZWYgPSBVUkwuY3JlYXRlT2JqZWN0VVJMKGJsb2IpO1xuXG5cdGlmKG9sZFNyYylcblx0XHRVUkwucmV2b2tlT2JqZWN0VVJMKG9sZFNyYyk7XG59XG5cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL34vc3R5bGUtbG9hZGVyL2FkZFN0eWxlcy5qc1xuLy8gbW9kdWxlIGlkID0gMTRcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///14\n");
 
 /***/ })
 /******/ ]);
