@@ -48,9 +48,9 @@ export default class Game {
 			}
 			})
 		
-		this.score1= new Score(this.width/2 -50, 30, 30);
+		this.score1= new Score(this.width/2 -100, 30, 30);
 
-		this.score2= new Score(this.width/2 +25, 30, 30);
+		this.score2= new Score(this.width/2 +80, 30, 30);
 		}
 
 	render() {
@@ -73,6 +73,12 @@ export default class Game {
 		this.player1.render(svg);
 		this.player2.render(svg);
 		this.gameElement.appendChild(svg);
+
+		if (this.player1.score === 11) {
+			alert("MARIO, YOU SAVED PRINCESS PEACH");
+		} else if (this.player2.score === 11) {
+			alert("BOWSER, YOU KILLED MARIO");
+		}
 	}
 
 }

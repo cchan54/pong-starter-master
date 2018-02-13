@@ -16,6 +16,10 @@ export default class Score {
     text.setAttributeNS(null, 'fill', 'white');
     text.textContent = score;
 
+    if (this.score === 7){
+      alert("YOU SAVED PRINCESS PEACH!");
+    }
+
     svg.appendChild(text);
   }
 
