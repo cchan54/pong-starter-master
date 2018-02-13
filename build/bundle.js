@@ -157,9 +157,9 @@ var Game = function () {
 			}
 		});
 
-		this.score1 = new _Score2.default(this.width / 2 - 50, 30, 30);
+		this.score1 = new _Score2.default(this.width / 2 - 100, 30, 30);
 
-		this.score2 = new _Score2.default(this.width / 2 + 25, 30, 30);
+		this.score2 = new _Score2.default(this.width / 2 + 80, 30, 30);
 	}
 
 	_createClass(Game, [{
@@ -184,6 +184,12 @@ var Game = function () {
 			this.player1.render(svg);
 			this.player2.render(svg);
 			this.gameElement.appendChild(svg);
+
+			if (this.player1.score === 11) {
+				alert('MARIO, YOU SAVED PRINCESS PEACH');
+			} else if (this.player2.score === 11) {
+				alert('BOWSER, YOU KILLED MARIO');
+			}
 		}
 	}]);
 
@@ -286,7 +292,7 @@ var Ball = function () {
       while (this.vy === 0) {
         this.vy = Math.floor(Math.random() * 10 - 5);
       }
-      this.vx = this.direction * (10 - Math.abs(this.vy));
+      this.vx = this.direction * (8 - Math.abs(this.vy));
     }
   }, {
     key: 'goal',
@@ -353,7 +359,7 @@ var Ball = function () {
       this.wallCollision();
       this.paddleCollision(player1, player2);
       var circle = document.createElementNS(_settings.SVG_NS, 'circle');
-      circle.setAttributeNS(null, 'r', this.radius), circle.setAttributeNS(null, 'fill', 'black'), circle.setAttributeNS(null, 'cx', this.x), circle.setAttributeNS(null, 'cy', this.y);
+      circle.setAttributeNS(null, 'r', this.radius), circle.setAttributeNS(null, 'fill', '#DCA123'), circle.setAttributeNS(null, 'cx', this.x), circle.setAttributeNS(null, 'cy', this.y);
       svg.appendChild(circle);
 
       var rightGoal = this.x + this.radius >= this.boardWidth;
@@ -402,11 +408,11 @@ var Board = function () {
     key: 'render',
     value: function render(svg) {
       var rect = document.createElementNS(_settings.SVG_NS, 'rect');
-      rect.setAttributeNS(null, 'fill', 'skyblue');
+      rect.setAttributeNS(null, 'fill', '#238EDC');
       rect.setAttributeNS(null, 'height', this.height);
       rect.setAttributeNS(null, 'width', this.width);
-      // rect.setAttributeNS(null, "stroke", "black");
-      // rect.setAttributeNS(null, "stroke-width", "4");
+      rect.setAttributeNS(null, 'stroke', 'black');
+      rect.setAttributeNS(null, 'stroke-width', '4');
 
       var line = document.createElementNS(_settings.SVG_NS, 'line');
       line.setAttributeNS(null, 'x1', this.width / 2);
@@ -467,17 +473,6 @@ var Paddle = function () {
     document.addEventListener('keyup', function (event) {
       _this.keyState[event.key || event.which] = false;
     }, true);
-    // document.addEventListener('keydown', event => {
-
-    //   switch (event.key) {
-    //     case up:
-    //       this.up();
-    //       break;
-    //     case down:
-    //       this.down();
-    //       break;
-    //   }
-    // });
   }
   // constructor ends
 
@@ -521,7 +516,7 @@ var Paddle = function () {
       }
 
       var rect = document.createElementNS(_settings.SVG_NS, 'rect');
-      rect.setAttributeNS(null, 'fill', 'black');
+      rect.setAttributeNS(null, 'fill', 'white');
       rect.setAttributeNS(null, 'width', this.width);
       rect.setAttributeNS(null, 'height', this.height);
       rect.setAttributeNS(null, 'x', this.x);
@@ -593,7 +588,7 @@ exports = module.exports = __webpack_require__(10)();
 
 
 // module
-exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n}\nol, ul {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}\n\n/**\n * FONTS\n */\n\n@font-face {\n  font-family: 'Silkscreen Web';\n  src: url(" + __webpack_require__(1) + ");\n  src: url(" + __webpack_require__(1) + "?#iefix) format('embedded-opentype'),\n    url(" + __webpack_require__(13) + ") format('woff'),\n    url(" + __webpack_require__(12) + ") format('truetype'),\n    url(" + __webpack_require__(11) + "#silkscreennormal) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\n/**\n * GAME\n */\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  font-family: 'Silkscreen Web', monotype;\n  height: 100vh;\n  justify-content: center;\n  width: 100%;\n}\n\nh1 {\n  font-size: 2.5rem;\n  margin-bottom: 1rem; \n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n}\nol, ul {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}\n\n/**\n * FONTS\n */\n\n@font-face {\n  font-family: 'Silkscreen Web';\n  src: url(" + __webpack_require__(1) + ");\n  src: url(" + __webpack_require__(1) + "?#iefix) format('embedded-opentype'),\n    url(" + __webpack_require__(13) + ") format('woff'),\n    url(" + __webpack_require__(12) + ") format('truetype'),\n    url(" + __webpack_require__(11) + "#silkscreennormal) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\n/**\n * GAME\n */\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  align-items: center;\n  display: flex;\n  font-family: 'Silkscreen Web', monotype;\n  color: #DCA123;\n  height: 80vh;\n  justify-content: center;\n  width: 100%;\n  background-image: url(/public/images/supermario.jpg);\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 100%;\n}\n\nh1 {\n  font-size: 2.5rem;\n  margin-bottom: 1rem; \n  text-align: center;\n}\n", ""]);
 
 // exports
 
