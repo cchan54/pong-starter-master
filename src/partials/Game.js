@@ -75,9 +75,9 @@ export default class Game {
 		this.gameElement.appendChild(svg);
 
 		if (this.player1.score === 11) {
-			alert("MARIO, YOU SAVED PRINCESS PEACH");
+			alert('MARIO, YOU SAVED PRINCESS PEACH');
 		} else if (this.player2.score === 11) {
-			alert("BOWSER, YOU KILLED MARIO");
+			alert('BOWSER, YOU KILLED MARIO');
 		}
 	}
 
