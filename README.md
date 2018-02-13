@@ -1,6 +1,6 @@
 # Pong Game
 
-A basic pong game using SVGs.
+A basic pong game using SVGs. This game was created for learning purposes. 
 
 ## Setup
 
