@@ -19,17 +19,7 @@ export default class Paddle {
     document.addEventListener('keyup', event => {
       this.keyState[event.key || event.which] = false;
     }, true);
-    // document.addEventListener('keydown', event => {
 
-    //   switch (event.key) {
-    //     case up:
-    //       this.up();
-    //       break;
-    //     case down:
-    //       this.down();
-    //       break;
-    //   }
-    // });
   } 
   // constructor ends
 
@@ -67,7 +57,7 @@ render(svg){
   }
 
   let rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttributeNS(null, 'fill', 'black');
+  rect.setAttributeNS(null, 'fill', 'white');
   rect.setAttributeNS(null, 'width', this.width);
   rect.setAttributeNS(null, 'height', this.height);
   rect.setAttributeNS(null, 'x', this.x);

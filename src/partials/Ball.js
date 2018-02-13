@@ -7,7 +7,7 @@ export default class Ball {
     this.x = x;
     this.y = y;
     this.direction = 1;
-    this.ping = new Audio('public/sounds/pong-01.wav');
+    this.ping = new Audio('public/sounds/smb_stomp.wav');
     this.reset();
   }
 
@@ -21,7 +21,7 @@ export default class Ball {
     while( this.vy === 0) {
       this.vy = Math.floor(Math.random() * 10 - 5);
     }
-    this.vx = this.direction * (10 - Math.abs(this.vy));
+    this.vx = this.direction * (8 - Math.abs(this.vy));
   }
 
   goal(player){
@@ -83,7 +83,7 @@ export default class Ball {
     this.paddleCollision(player1, player2);
     let circle = document.createElementNS(SVG_NS, 'circle');
     circle.setAttributeNS(null, 'r', this.radius),
-    circle.setAttributeNS(null, 'fill', 'black'),
+    circle.setAttributeNS(null, 'fill', '#DCA123'),
     circle.setAttributeNS(null, 'cx', this.x),
     circle.setAttributeNS(null, 'cy', this.y);
     svg.appendChild(circle);

@@ -74,9 +74,14 @@ body {
   align-items: center;
   display: flex;
   font-family: 'Silkscreen Web', monotype;
-  height: 100vh;
+  color: #DCA123;
+  height: 80vh;
   justify-content: center;
   width: 100%;
+  background-image: url(/public/images/supermario.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
 h1 {
