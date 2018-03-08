@@ -76,10 +76,11 @@ export default class Game {
 
 		if (this.player1.score === 11) {
 			alert('MARIO, YOU SAVED PRINCESS PEACH');
-			location.reload();
+			window.location.reload(true);
+
 		} else if (this.player2.score === 11) {
 			alert('BOWSER, YOU KILLED MARIO');
-			location.reload();
+			window.location.reload(true);
 		}
 	}
 
