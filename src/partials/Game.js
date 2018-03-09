@@ -1,4 +1,7 @@
-import { SVG_NS, KEYS } from '../settings';
+import {
+	SVG_NS,
+	KEYS
+} from '../settings';
 import Board from './Board';
 import Paddle from './Paddle';
 import Ball from './Ball';
@@ -41,22 +44,22 @@ export default class Game {
 		);
 
 		document.addEventListener('keydown', event => {
-			switch(event.key) {
+			switch (event.key) {
 				case KEYS.spaceBar:
 					this.pause = !this.pause;
-						break;
+					break;
 			}
-			})
-		
-		this.score1= new Score(this.width/2 -100, 30, 30);
+		})
 
-		this.score2= new Score(this.width/2 +80, 30, 30);
-		}
+		this.score1 = new Score(this.width / 2 - 100, 30, 30);
+
+		this.score2 = new Score(this.width / 2 + 80, 30, 30);
+	}
 
 	render() {
 
-		if (this.pause){
-      return;
+		if (this.pause) {
+			return;
 		}
 
 		this.gameElement.innerHTML = '';

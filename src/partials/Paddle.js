@@ -1,4 +1,6 @@
-import { SVG_NS } from '../settings';
+import {
+  SVG_NS
+} from '../settings';
 
 export default class Paddle {
   constructor(boardHeight, width, height, x, y, up, down, player) {
@@ -20,17 +22,17 @@ export default class Paddle {
       this.keyState[event.key || event.which] = false;
     }, true);
 
-  } 
+  }
   // constructor ends
 
-  up(){
+  up() {
     this.y = Math.max(this.y - this.speed, 0);
   }
 
-  down(){
+  down() {
     this.y = Math.min(this.y + this.speed, this.boardHeight - this.height);
   }
-  
+
   coordinates(x, y, width, height) {
     let leftX = x;
     let rightX = x + width;
@@ -41,31 +43,31 @@ export default class Paddle {
 
   // render svg images
 
-render(svg){
+  render(svg) {
 
-  if (this.keyState['a'] && this.player === 'player1') {
-    this.up();
-  }
-  if (this.keyState['z'] && this.player === 'player1') {
-    this.down();
-  }
-  if (this.keyState['ArrowUp'] && this.player === 'player2') {
-    this.up();
-  }
-  if (this.keyState['ArrowDown'] && this.player === 'player2') {
-    this.down();
-  }
+    if (this.keyState['a'] && this.player === 'player1') {
+      this.up();
+    }
+    if (this.keyState['z'] && this.player === 'player1') {
+      this.down();
+    }
+    if (this.keyState['ArrowUp'] && this.player === 'player2') {
+      this.up();
+    }
+    if (this.keyState['ArrowDown'] && this.player === 'player2') {
+      this.down();
+    }
 
-  let rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttributeNS(null, 'fill', 'white');
-  rect.setAttributeNS(null, 'width', this.width);
-  rect.setAttributeNS(null, 'height', this.height);
-  rect.setAttributeNS(null, 'x', this.x);
-  rect.setAttributeNS(null, 'y', this.y);
-  // rect.setAttributeNS(null, 'speed', this.speed);
+    let rect = document.createElementNS(SVG_NS, 'rect');
+    rect.setAttributeNS(null, 'fill', 'white');
+    rect.setAttributeNS(null, 'width', this.width);
+    rect.setAttributeNS(null, 'height', this.height);
+    rect.setAttributeNS(null, 'x', this.x);
+    rect.setAttributeNS(null, 'y', this.y);
+    // rect.setAttributeNS(null, 'speed', this.speed);
 
-  
-  svg.appendChild(rect);
-}
+
+    svg.appendChild(rect);
+  }
 
 }
