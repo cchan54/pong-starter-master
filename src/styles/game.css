@@ -164,7 +164,7 @@ body {
   justify-content: center;
   width: 100%;
   background-color: black;
-  background-image: url('/public/images/supermario.jpg');
+  background-image: url('https://github.com/cchan54/space-pong/blob/master/public/images/supermario.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
